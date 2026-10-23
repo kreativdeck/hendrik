@@ -1,0 +1,31 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sectionMeta } from '../lib/seo';
+import SiteImage from './SiteImage.astro';
+import type { SectionData } from '../lib/sections';
+import type pages from '../content/pages.json';
+interface Props { data: SectionData; pageKey: keyof typeof pages }
+const { data, pageKey } = Astro.props;
+const { section, categories } = data;
+const urlPath = '/' + section.key + '/';
+---
+<BaseLayout meta={sectionMeta(data)} pageKey={pageKey} currentPage={section.key}>
+  <section class="flex flex-col gap-xl px-gutter py-section-m" aria-labelledby="bereich-heading">
+    <div class="@container mx-auto flex w-full max-w-site flex-col gap-xl">
+      <h1 id="bereich-heading">{section.label}</h1>
+      <p class="text-l">{section.lead}</p>
+      <ul class="grid grid-cols-[minmax(0,1fr)] gap-m @min-[64rem]:grid-cols-2">
+        {Object.entries(categories).map(([key, category]) => (
+          <li class="grid grid-cols-[minmax(0,1fr)] gap-m @min-[38rem]:grid-cols-2 @min-[38rem]:@max-[63.99rem]:[&:nth-child(even)>div]:order-first @min-[64rem]:[&:nth-child(4n+3)>div]:order-first @min-[64rem]:[&:nth-child(4n+4)>div]:order-first [&>picture]:block [&>picture]:aspect-square [&>picture]:min-w-0">
+            <SiteImage source={category.overviewCover ?? category.cover} alt="" class="aspect-square size-full rounded-base object-cover" sizes="(min-width: 64rem) 25vw, (min-width: 38rem) 50vw, 100vw" />
+            <div class:list={['flex aspect-square min-w-0 flex-col items-start justify-center gap-s p-m', category.tint]}>
+              <h2 class="text-h3">{category.label}</h2>
+              <p>{category.text}</p>
+              <a class="underline underline-offset-2" href={urlPath + key + '/'}>Mehr erfahren<span class="sr-only"> {category.label}</span></a>
+            </div>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+</BaseLayout>

@@ -1,0 +1,13 @@
+---
+import SiteImage from './SiteImage.astro';
+interface Props { image: string; alt: string; title: string }
+const { image, alt, title } = Astro.props;
+---
+<section class="flex flex-col gap-xl p-0" aria-labelledby="hero-heading">
+  <div class="@container mx-auto flex w-full max-w-none flex-col">
+    <div class="relative grid min-h-[calc(100cqi*360/890)] grid-cols-[minmax(0,1fr)] overflow-hidden [&>picture]:absolute [&>picture]:inset-0 [&>picture]:size-full">
+      <SiteImage source={image} alt={alt} class="absolute inset-0 size-full object-cover" sizes="100vw" />
+      <h1 id="hero-heading" class="sr-only">{title}</h1>
+    </div>
+  </div>
+</section>

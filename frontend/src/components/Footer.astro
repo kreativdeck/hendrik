@@ -1,0 +1,19 @@
+---
+import Logo from './Logo.astro';
+interface Props { currentPage?: string }
+const { currentPage = '' } = Astro.props;
+---
+<footer class="border-t border-black/20 bg-white px-gutter py-m text-black">
+  <div class="mx-auto flex w-full max-w-site flex-col items-stretch">
+    <div class="flex flex-wrap items-center justify-between gap-m">
+      <a class="block w-[calc(var(--spacing-xxl)*1.5)] max-w-full min-w-0" href="/" aria-label="Hendrik Lampe – Startseite" aria-current={currentPage === "home" ? "page" : undefined}>
+        <Logo />
+      </a>
+      <p>&copy; 1994–<span data-current-year>{new Date().getFullYear()}</span> Hendrik Lampe</p>
+      <nav class="flex flex-wrap gap-s" aria-label="Rechtliches">
+        <a class="underline-offset-2 hover:underline aria-[current=page]:underline" href="/impressum/" aria-current={currentPage === "impressum" ? "page" : undefined}>Impressum</a>
+        <a class="underline-offset-2 hover:underline aria-[current=page]:underline" href="/datenschutz/" aria-current={currentPage === "datenschutz" ? "page" : undefined}>Datenschutz</a>
+      </nav>
+    </div>
+  </div>
+</footer>

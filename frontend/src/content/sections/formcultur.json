@@ -1,0 +1,38 @@
+{
+  "section": {
+    "key": "formcultur",
+    "label": "Formcultur",
+    "title": "Formcultur | Hendrik Lampe",
+    "description": "Formcultur von Hendrik Lampe: die Polsterliege Løvseth mit Holzgestell und seitlicher Ablage. Bilder in Grau und Gelb entdecken.",
+    "lead": "Klare Formen, Holz und Polster: Entdecke die Polsterliege Løvseth in Grau und Gelb."
+  },
+  "categories": {
+    "lovseth": {
+      "label": "Løvseth",
+      "tint": "bg-tint-1",
+      "text": "Eine Polsterliege mit Holzgestell, seitlicher Ablage und variablem Rückenteil.",
+      "lead": "Polsterliege mit Holzgestell und seitlicher Ablage – in Grau und Gelb, mit aufgestelltem oder flach gelegtem Rückenteil.",
+      "folder": "Formkultur/Lovseth",
+      "cover": "Formkultur/Lovseth/formkultur-lovseth-polsterliege-04-grau-wohnraum-sessel-hendrik-lampe.jpg",
+      "overviewCover": "Formkultur/Lovseth/formkultur-lovseth-polsterliege-07-gelb-sitzgruppe-wohnraum-hendrik-lampe.jpg"
+    },
+    "solveig": {
+      "label": "Solveig",
+      "tint": "bg-tint-2",
+      "text": "Coming Soon – weitere Informationen folgen in Kürze.",
+      "lead": "Solveig – weitere Informationen und Bilder folgen in Kürze.",
+      "folder": "Formkultur/Solveig",
+      "cover": "Formkultur/Solveig/solveig-coming-soon.svg"
+    }
+  },
+  "descriptions": {
+    "solveig-coming-soon.svg": "Platzhalter für Solveig mit dem Hinweis „Bild folgt“.",
+    "formkultur-lovseth-polsterliege-01-grau-freigestellt-rueckenteil-hendrik-lampe.jpg": "Freigestellte graue Polsterliege Løvseth mit aufgestelltem Rückenteil, Rückenkissen und seitlicher Holzablage.",
+    "formkultur-lovseth-polsterliege-02-grau-freigestellt-liegeposition-hendrik-lampe.jpg": "Freigestellte graue Polsterliege Løvseth mit flach gelegtem Rückenteil und Kissen in der Liegeposition.",
+    "formkultur-lovseth-polsterliege-03-grau-freigestellt-sitzgruppe-hendrik-lampe.jpg": "Freigestellte Sitzgruppe mit grauer Polsterliege Løvseth in Liegeposition, Sessel und Beistelltisch.",
+    "formkultur-lovseth-polsterliege-04-grau-wohnraum-sessel-hendrik-lampe.jpg": "Graue Polsterliege Løvseth mit Walnussholzgestell und Ablage in einer hellen Raumecke, davor ein grauer Sessel und ein Beistelltisch mit schwarzer Lampe.",
+    "formkultur-lovseth-polsterliege-05-gelb-freigestellt-rueckenteil-hendrik-lampe.jpg": "Freigestellte gelbe Polsterliege Løvseth mit aufgestelltem Rückenteil, Rückenkissen und seitlicher Holzablage.",
+    "formkultur-lovseth-polsterliege-06-gelb-freigestellt-liegeposition-hendrik-lampe.jpg": "Freigestellte gelbe Polsterliege Løvseth mit flach gelegtem Rückenteil und losem Kissen auf dem Holzgestell.",
+    "formkultur-lovseth-polsterliege-07-gelb-sitzgruppe-wohnraum-hendrik-lampe.jpg": "Gelbe Polsterliege Løvseth mit aufgestelltem Rückenteil und seitlicher Holzablage im Wohnzimmer."
+  }
+}

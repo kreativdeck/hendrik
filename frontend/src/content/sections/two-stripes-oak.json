@@ -1,0 +1,29 @@
+{
+  "section": {
+    "key": "two-stripes-oak",
+    "label": "Two Stripes Oak",
+    "single": true
+  },
+  "categories": {
+    "two-stripes-oak": {
+      "label": "Two Stripes Oak",
+      "lead": "Tisch, Sitzbänke und Stuhl aus Eiche, durchzogen von einem dunklen Streifen.",
+      "folder": "Two Stripes Oak",
+      "cover": "Two Stripes Oak/holzmoebel-two-stripes-oak-tisch-sitzbaenk-hendrik-lampe.jpg",
+      "exclude": [
+        "holzmoebel-two-stripes-oak-sitzbank-tisch-hendrik-lampe.jpg"
+      ]
+    }
+  },
+  "descriptions": {
+    "two-stripes-oak-bank-lang.jpg": "Lange Sitzbank aus Eiche mit dunklen Holzstreifen vor einem grünen Scheunentor.",
+    "two-stripes-oak-sitzbaenke-stuhl.jpg": "Tisch mit Sitzbänken und Stuhl aus Eiche mit dunklen Holzstreifen vor einem grünen Scheunentor.",
+    "holzmoebel-two-stripes-oak-nut-feder-hendrik-lampe.jpg": "Nahaufnahme der Tischecke aus Eiche mit dunklem Holzstreifen und herausstehender Feder.",
+    "holzmoebel-two-stripes-oak-sitzbank-hendrik-lampe.jpg": "Langer Tisch mit Sitzbank aus Eiche mit dunklem Streifen vor einer hellen Wand.",
+    "holzmoebel-two-stripes-oak-sitzbank-tisch-hendrik-lampe.jpg": "Tisch und Sitzbank aus Eiche mit dunklem Streifen vor einer weißen Backsteinwand.",
+    "holzmoebel-two-stripes-oak-stuhl-hendrik-lampe.jpg": "Stuhl aus Eiche mit dunklem Streifen vor einer grünen Holzwand.",
+    "holzmoebel-two-stripes-oak-terrasse-tisch-hendrik-lampe.jpg": "Kante einer Eichenplatte mit eingelegter dunkler Fuge in der Nahaufnahme.",
+    "holzmoebel-two-stripes-oak-tisch-hendrik-lampe.jpg": "Tischkante aus Eiche mit dunklem Streifen vor einer grünen Holzwand.",
+    "holzmoebel-two-stripes-oak-tisch-sitzbaenk-hendrik-lampe.jpg": "Tisch mit zwei Sitzbänken aus Eiche mit dunklem Streifen im Freien vor einer grünen Holzwand."
+  }
+}

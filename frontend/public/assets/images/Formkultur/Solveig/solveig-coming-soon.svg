@@ -1,0 +1,9 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="1200" viewBox="0 0 1200 1200" role="img" aria-label="Platzhalter: Bild folgt">
+  <rect width="1200" height="1200" fill="#e4e5db"/>
+  <g fill="none" stroke="#8c8f86" stroke-width="12" stroke-linecap="round" stroke-linejoin="round">
+    <rect x="420" y="400" width="360" height="270" rx="24"/>
+    <circle cx="510" cy="480" r="30"/>
+    <path d="M420 640 L540 540 L620 610 L690 550 L780 630"/>
+  </g>
+  <text x="600" y="770" text-anchor="middle" font-family="Helvetica, Arial, sans-serif" font-size="48" fill="#6f7269">Bild folgt</text>
+</svg>

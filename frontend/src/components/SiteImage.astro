@@ -1,0 +1,27 @@
+---
+import images from 'virtual:hendrik-images';
+interface Props {
+  source: string;
+  alt: string;
+  class?: string;
+  sizes?: string;
+  loading?: 'lazy' | 'eager';
+}
+const { source, alt, class: className, sizes, loading } = Astro.props;
+const image = images[source];
+if (!image) throw new Error(`Bildquelle nicht gefunden: ${source}`);
+const srcset = (format: 'avif' | 'webp') => {
+  const entries = Object.entries(image.variants[format]);
+  if ((image.width ?? 0) > 150 && entries.length && Math.max(...entries.map(([w]) => +w)) <= 150) return '';
+  return entries.map(([width, url]) => `${url} ${width}w`).join(', ');
+};
+const avif = srcset('avif');
+const webp = srcset('webp');
+---
+{avif || webp ? (
+  <picture>
+    {avif && <source type="image/avif" srcset={avif} sizes={sizes} />}
+    {webp && <source type="image/webp" srcset={webp} sizes={sizes} />}
+    <img src={image.url} alt={alt} width={image.width ?? undefined} height={image.height ?? undefined} class={className} loading={loading} />
+  </picture>
+) : <img src={image.url} alt={alt} width={image.width ?? undefined} height={image.height ?? undefined} class={className} loading={loading} />}

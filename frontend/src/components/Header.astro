@@ -1,0 +1,101 @@
+---
+import Logo from './Logo.astro';
+import lion from '../../public/assets/icons/lion.svg?raw';
+import donkey from '../../public/assets/icons/donkey.svg?raw';
+import twoStripesOak from '../../public/assets/icons/two-stripes-oak-logo.svg?raw';
+interface Props { currentPage?: string }
+const { currentPage = '' } = Astro.props;
+---
+<header class="group/header border-b border-black/20 bg-white px-gutter text-black transition-transform focus-within:translate-y-0 [&.is-ready]:sticky [&.is-ready]:top-0 [&.is-ready]:z-50 slid-up:-translate-y-full" data-header data-slide-up-after="300">
+  <div class="mx-auto flex w-full max-w-site flex-col items-stretch">
+    <div class="grid items-center gap-s py-xs ready:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] compact:grid-cols-[minmax(0,1fr)_auto] compact:gap-xs" data-header-grid>
+      <a class="block w-[calc(var(--spacing-xxl)*1.5)] max-w-full min-w-0" data-header-brand href="/" aria-label="Hendrik Lampe – Startseite" aria-current={currentPage === "home" ? "page" : undefined}>
+        <Logo />
+      </a>
+      <nav id="site-nav" class="block min-w-0 pending:invisible pending:absolute compact:invisible compact:pointer-events-none compact:absolute compact:inset-x-0 compact:top-full compact:h-[calc(100dvh-var(--header-height))] compact:-translate-x-full compact:overflow-y-auto compact:overscroll-contain compact:border-b compact:border-black/20 compact:bg-white compact:px-gutter compact:py-s animated:compact:transition-[translate,visibility] compact:nav-open:visible compact:nav-open:pointer-events-auto compact:nav-open:translate-x-0 motion-reduce:transition-none" data-site-nav aria-label="Hauptnavigation">
+        <ul class="flex flex-col flex-nowrap gap-s ready:w-max ready:flex-row ready:items-center compact:w-full compact:flex-col compact:items-stretch" data-header-list>
+                    <li class="relative flex flex-col text-m font-light ready:flex-row ready:items-center compact:flex-col compact:items-stretch">
+                        <button class="group/toggle inline-flex cursor-pointer items-center gap-xs compact:flex compact:w-full compact:justify-between compact:py-xs" data-submenu-toggle type="button" aria-expanded="false" aria-controls="submenu-0" data-active={currentPage === "interior" || currentPage.startsWith("interior/") ? "true" : undefined}>
+                            <span class="inline-flex items-center gap-[calc(var(--spacing-xs)*0.5)]">
+                <Fragment set:html={lion} />
+                Interior              </span>
+                            <span class="size-[0.5em] -translate-y-1/4 rotate-45 border-e-2 border-b-2 border-current group-aria-expanded/toggle:translate-y-1/4 group-aria-expanded/toggle:rotate-[225deg]" aria-hidden="true"></span>
+            </button>
+            <ul class="flex flex-col flex-nowrap bg-white py-xs font-light ready:absolute ready:start-0 ready:top-full ready:w-max ready:min-w-full ready:border ready:border-black/20 ready:transition-[opacity,translate] ready:starting:-translate-y-[calc(var(--spacing-xs)*0.5)] ready:starting:opacity-0 compact:static compact:w-full compact:border-0 compact:py-0 motion-reduce:transition-none" id="submenu-0">
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/interior/" aria-current={currentPage === "interior" ? "page" : undefined}>Übersicht</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/interior/wohnen/" aria-current={currentPage === "interior/wohnen" ? "page" : undefined}>Wohnen</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/interior/kochen/" aria-current={currentPage === "interior/kochen" ? "page" : undefined}>Kochen</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/interior/essen/" aria-current={currentPage === "interior/essen" ? "page" : undefined}>Essen</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/interior/schlafen/" aria-current={currentPage === "interior/schlafen" ? "page" : undefined}>Schlafen</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/interior/baden/" aria-current={currentPage === "interior/baden" ? "page" : undefined}>Baden</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/interior/arbeiten/" aria-current={currentPage === "interior/arbeiten" ? "page" : undefined}>Arbeiten</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/interior/holzobjekte/" aria-current={currentPage === "interior/holzobjekte" ? "page" : undefined}>Holzobjekte</a></li>
+                          </ul>
+                      </li>
+                    <li class="relative flex flex-col text-m font-light ready:flex-row ready:items-center compact:flex-col compact:items-stretch">
+                        <button class="group/toggle inline-flex cursor-pointer items-center gap-xs compact:flex compact:w-full compact:justify-between compact:py-xs" data-submenu-toggle type="button" aria-expanded="false" aria-controls="submenu-1" data-active={currentPage === "formcultur" || currentPage.startsWith("formcultur/") ? "true" : undefined}>
+                            Formcultur                            <span class="size-[0.5em] -translate-y-1/4 rotate-45 border-e-2 border-b-2 border-current group-aria-expanded/toggle:translate-y-1/4 group-aria-expanded/toggle:rotate-[225deg]" aria-hidden="true"></span>
+            </button>
+            <ul class="flex flex-col flex-nowrap bg-white py-xs font-light ready:absolute ready:start-0 ready:top-full ready:w-max ready:min-w-full ready:border ready:border-black/20 ready:transition-[opacity,translate] ready:starting:-translate-y-[calc(var(--spacing-xs)*0.5)] ready:starting:opacity-0 compact:static compact:w-full compact:border-0 compact:py-0 motion-reduce:transition-none" id="submenu-1">
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/formcultur/" aria-current={currentPage === "formcultur" ? "page" : undefined}>Übersicht</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/formcultur/lovseth/" aria-current={currentPage === "formcultur/lovseth" ? "page" : undefined}>Løvseth</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/formcultur/solveig/" aria-current={currentPage === "formcultur/solveig" ? "page" : undefined}>Solveig</a></li>
+                          </ul>
+                      </li>
+                    <li class="relative flex flex-col text-m font-light ready:flex-row ready:items-center compact:flex-col compact:items-stretch">
+                        <button class="group/toggle inline-flex cursor-pointer items-center gap-xs compact:flex compact:w-full compact:justify-between compact:py-xs" data-submenu-toggle type="button" aria-expanded="false" aria-controls="submenu-2" data-active={currentPage === "landoak" || currentPage.startsWith("landoak/") ? "true" : undefined}>
+                            <span class="inline-flex items-center gap-[calc(var(--spacing-xs)*0.5)]">
+                <Fragment set:html={donkey} />
+                Landoak              </span>
+                            <span class="size-[0.5em] -translate-y-1/4 rotate-45 border-e-2 border-b-2 border-current group-aria-expanded/toggle:translate-y-1/4 group-aria-expanded/toggle:rotate-[225deg]" aria-hidden="true"></span>
+            </button>
+            <ul class="flex flex-col flex-nowrap bg-white py-xs font-light ready:absolute ready:start-0 ready:top-full ready:w-max ready:min-w-full ready:border ready:border-black/20 ready:transition-[opacity,translate] ready:starting:-translate-y-[calc(var(--spacing-xs)*0.5)] ready:starting:opacity-0 compact:static compact:w-full compact:border-0 compact:py-0 motion-reduce:transition-none" id="submenu-2">
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/landoak/" aria-current={currentPage === "landoak" ? "page" : undefined}>Übersicht</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/landoak/furniture/" aria-current={currentPage === "landoak/furniture" ? "page" : undefined}>Furniture</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/landoak/accessoires/" aria-current={currentPage === "landoak/accessoires" ? "page" : undefined}>Accessoires</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/landoak/farben/" aria-current={currentPage === "landoak/farben" ? "page" : undefined}>Farben</a></li>
+                          </ul>
+                      </li>
+                    <li class="relative flex flex-col text-m font-light ready:flex-row ready:items-center compact:flex-col compact:items-stretch">
+                        <a class="inline-flex items-center gap-[calc(var(--spacing-xs)*0.5)]" href="/two-stripes-oak/" aria-current={currentPage === "two-stripes-oak" ? "page" : undefined}>
+                <span class="block size-[1.25em] shrink-0 bg-white [&>svg]:block [&>svg]:size-full" data-nav-icon aria-hidden="true">
+                  <Fragment set:html={twoStripesOak} />
+                </span>
+                Two Stripes Oak
+              </a>
+                      </li>
+                    <li class="relative flex flex-col text-m font-light ready:flex-row ready:items-center compact:flex-col compact:items-stretch">
+                        <button class="group/toggle inline-flex cursor-pointer items-center gap-xs compact:flex compact:w-full compact:justify-between compact:py-xs" data-submenu-toggle type="button" aria-expanded="false" aria-controls="submenu-4" data-active={currentPage === "materials" || currentPage.startsWith("materials/") ? "true" : undefined}>
+                            Materials                            <span class="size-[0.5em] -translate-y-1/4 rotate-45 border-e-2 border-b-2 border-current group-aria-expanded/toggle:translate-y-1/4 group-aria-expanded/toggle:rotate-[225deg]" aria-hidden="true"></span>
+            </button>
+            <ul class="flex flex-col flex-nowrap bg-white py-xs font-light ready:absolute ready:start-0 ready:top-full ready:w-max ready:min-w-full ready:border ready:border-black/20 ready:transition-[opacity,translate] ready:starting:-translate-y-[calc(var(--spacing-xs)*0.5)] ready:starting:opacity-0 compact:static compact:w-full compact:border-0 compact:py-0 motion-reduce:transition-none" id="submenu-4">
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/materials/" aria-current={currentPage === "materials" ? "page" : undefined}>Übersicht</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/materials/holzarten/" aria-current={currentPage === "materials/holzarten" ? "page" : undefined}>Holzarten</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/materials/oberflaechen/" aria-current={currentPage === "materials/oberflaechen" ? "page" : undefined}>Oberflächen</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/materials/messingkanten/" aria-current={currentPage === "materials/messingkanten" ? "page" : undefined}>Messingkanten</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/materials/farben/" aria-current={currentPage === "materials/farben" ? "page" : undefined}>Farben</a></li>
+                          </ul>
+                      </li>
+                    <li class="relative flex flex-col text-m font-light ready:flex-row ready:items-center compact:flex-col compact:items-stretch">
+                        <button class="group/toggle inline-flex cursor-pointer items-center gap-xs compact:flex compact:w-full compact:justify-between compact:py-xs" data-submenu-toggle type="button" aria-expanded="false" aria-controls="submenu-5" data-active={currentPage === "ueber-uns" || currentPage.startsWith("about/") ? "true" : undefined}>
+                            About                            <span class="size-[0.5em] -translate-y-1/4 rotate-45 border-e-2 border-b-2 border-current group-aria-expanded/toggle:translate-y-1/4 group-aria-expanded/toggle:rotate-[225deg]" aria-hidden="true"></span>
+            </button>
+            <ul class="flex flex-col flex-nowrap bg-white py-xs font-light ready:absolute ready:start-0 ready:top-full ready:w-max ready:min-w-full ready:border ready:border-black/20 ready:transition-[opacity,translate] ready:starting:-translate-y-[calc(var(--spacing-xs)*0.5)] ready:starting:opacity-0 compact:static compact:w-full compact:border-0 compact:py-0 motion-reduce:transition-none" id="submenu-5">
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/ueber-uns/" aria-current={currentPage === "ueber-uns" ? "page" : undefined}>Über mich</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/about/works/" aria-current={currentPage === "about/works" ? "page" : undefined}>Works</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/about/lookbook/" aria-current={currentPage === "about/lookbook" ? "page" : undefined}>Lookbook</a></li>
+                            <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/about/referenzen/" aria-current={currentPage === "about/referenzen" ? "page" : undefined}>Referenzen</a></li>
+                          </ul>
+                      </li>
+                    <li class="relative hidden text-m font-light compact:block">
+            <a class="underline-offset-2 hover:underline aria-[current=page]:underline compact:flex compact:w-full compact:justify-between compact:py-xs" data-mobile-contact href="/kontakt/" aria-current={currentPage === "kontakt" ? "page" : undefined}>Kontakt</a>
+          </li>
+        </ul>
+      </nav>
+      <a class="inline-flex w-max min-w-[8.75rem] cursor-pointer items-center justify-center rounded-base border-[1.5px] border-muted bg-white px-[1.25em] py-[0.8em] text-center text-m leading-none text-black aria-[current=page]:text-lion justify-self-start font-light ready:justify-self-end compact:hidden" data-header-contact href="/kontakt/" aria-current={currentPage === "kontakt" ? "page" : undefined}>Kontakt</a>
+      <button class="group/nav-toggle hidden cursor-pointer compact:inline-flex compact:min-h-[calc(var(--spacing-m)+var(--spacing-xs)*2)] compact:min-w-[calc(var(--spacing-m)+var(--spacing-xs)*2)] compact:items-center compact:justify-end compact:justify-self-end compact:border-0 compact:p-xs compact:pe-0" data-nav-toggle type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
+        <span class="relative block h-0.5 w-m bg-current transition-colors group-aria-expanded/nav-toggle:bg-transparent before:absolute before:inset-0 before:-translate-y-[calc(var(--spacing-xs)*0.5)] before:bg-current before:transition-transform before:content-[''] group-aria-expanded/nav-toggle:before:translate-y-0 group-aria-expanded/nav-toggle:before:rotate-45 after:absolute after:inset-0 after:translate-y-[calc(var(--spacing-xs)*0.5)] after:bg-current after:transition-transform after:content-[''] group-aria-expanded/nav-toggle:after:translate-y-0 group-aria-expanded/nav-toggle:after:-rotate-45 motion-reduce:transition-none motion-reduce:before:transition-none motion-reduce:after:transition-none" aria-hidden="true"></span>
+      </button>
+    </div>
+  </div>
+</header>

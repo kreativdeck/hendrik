@@ -1,0 +1,40 @@
+---
+import '../styles/global.css';
+import Header from '../components/Header.astro';
+import Footer from '../components/Footer.astro';
+import pages from '../content/pages.json';
+import { site } from '../config/site';
+import type { PageMeta } from '../lib/seo';
+interface Props { pageKey?: keyof typeof pages; currentPage?: string; meta?: PageMeta }
+const { pageKey, currentPage = pageKey === 'index' ? 'home' : pageKey, meta } = Astro.props;
+const page = meta ?? (pageKey ? pages[pageKey] : null);
+if (!page) throw new Error('Seitendaten fehlen');
+const schema = page.schema ? JSON.stringify(page.schema).replaceAll('https://www.deinedomain.de', site.url).replaceAll('<', '\\u003c') : null;
+---
+<!DOCTYPE html>
+<html lang={site.lang}>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{page.title}</title>
+    <meta name="description" content={page.description} />
+    {page.noindex && <meta name="robots" content="noindex" />}
+    <link rel="icon" href="/favicon.svg" type="image/svg+xml" />
+    <link rel="icon" href="/favicon.ico" />
+    <link rel="apple-touch-icon" href="/apple-touch-icon.png" />
+    <link rel="manifest" href="/site.webmanifest" />
+    <link rel="preload" href="/assets/fonts/exo-2-v26-latin-300.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/exo-2-v26-latin-regular.woff2" as="font" type="font/woff2" crossorigin />
+    <link rel="preload" href="/assets/fonts/exo-2-v26-latin-700.woff2" as="font" type="font/woff2" crossorigin />
+    {schema && <script type="application/ld+json" set:html={schema} />}
+  </head>
+  <body>
+    <a class="absolute start-gutter top-s z-10 bg-white px-s py-xs text-black not-focus:sr-only" href="#main">Zum Inhalt springen</a>
+    <Header currentPage={currentPage} />
+    <main id="main"><slot /></main>
+    <Footer currentPage={currentPage} />
+    <script>
+      import '../scripts/main.js';
+    </script>
+  </body>
+</html>

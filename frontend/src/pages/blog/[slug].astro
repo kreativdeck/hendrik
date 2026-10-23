@@ -1,0 +1,21 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { posts, formatDate, type BlogPost } from '../../lib/blog';
+import { blogMeta } from '../../lib/seo';
+export function getStaticPaths() { return posts.map((post) => ({ params: { slug: post.slug }, props: { post } })); }
+interface Props { post: BlogPost }
+const { post } = Astro.props;
+---
+<BaseLayout meta={blogMeta(post)} currentPage="blog">
+  <article>
+    <header class="px-gutter pt-section-m">
+      <div class="mx-auto flex w-full max-w-site flex-col gap-s">
+        <h1>{post.title}</h1>
+        {post.date && <time class="text-s" datetime={post.date}>{formatDate(post.date)}</time>}
+      </div>
+    </header>
+    <section class="flex flex-col gap-xl px-gutter py-section-m">
+      <div class="mx-auto w-full max-w-site smart-spacing" set:html={post.content} />
+    </section>
+  </article>
+</BaseLayout>

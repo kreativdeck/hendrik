@@ -1,0 +1,55 @@
+{
+  "section": {
+    "key": "materials",
+    "label": "Materials",
+    "title": "Materials | Hendrik Lampe",
+    "description": "Materialien für Möbel von Hendrik Lampe: Holzarten, Oberflächen, Messingkanten und Farben.",
+    "lead": "Holzarten, Oberflächen, Messingkanten und Farben für Möbel aus Holz."
+  },
+  "categories": {
+    "holzarten": {
+      "tint": "bg-tint-1",
+      "label": "Holzarten",
+      "text": "Douglasie, Eiche und Nussbaum: drei Hölzer mit eigener Maserung.",
+      "lead": "Die Holzarten Douglasie, Eiche und Nussbaum, jede mit eigener Maserung und Farbe.",
+      "folder": "Materialen/Holzarten",
+      "cover": "Materialen/Holzarten/Eiche/landoak-holzarten-eiche.jpg"
+    },
+    "oberflaechen": {
+      "tint": "bg-tint-4",
+      "label": "Oberflächen",
+      "text": "Glatt geschliffen oder sandgestrahlt: Oberflächen mit eigener Struktur.",
+      "lead": "Oberflächen für Holz: glatt geschliffen oder sandgestrahlt.",
+      "folder": "Materialen/Oberflächen",
+      "cover": "Materialen/Oberflächen/landoak-oberflaeche-sandgestrahlt.jpg"
+    },
+    "messingkanten": {
+      "tint": "bg-tint-6",
+      "label": "Messingkanten",
+      "text": "Kanten aus Messing: glänzend, matt oder matt gebürstet.",
+      "lead": "Messingkanten für Tischplatten und Bretter: glänzend, matt oder matt gebürstet.",
+      "folder": "Materialen/Messingkanten",
+      "cover": "Materialen/Messingkanten/landoak-messingkante-glaenzend.jpg"
+    },
+    "farben": {
+      "tint": "bg-tint-2",
+      "label": "Farben",
+      "text": "Die Holzfarben in sanften Pastelltönen.",
+      "lead": "Holzfarben in sanften Pastelltönen auf Eichenholz.",
+      "folder": "Materialen/Farben",
+      "cover": "Lookbook/landoak-loobook-impressionen-1.jpg"
+    }
+  },
+  "descriptions": {
+    "landoak-holzarten-douglasie.jpg": "Nahaufnahme einer Douglasienholzplatte mit ausgeprägter Maserung.",
+    "landoak-holzarten-eiche.jpg": "Nahaufnahme einer hellen Eichenholzfläche mit feiner Maserung.",
+    "landoak-holzarten-nussbaum.jpg": "Nahaufnahme einer Nussbaumholzplatte mit Astauge und dunkler Maserung.",
+    "landoak-oberflaeche-glatte-struktur.jpg": "Glatt geschliffenes Eichenholzmuster auf einer rustikalen Eichenplatte mit Ästen.",
+    "landoak-oberflaeche-sandgestrahlt.jpg": "Vier sandgestrahlte Eichenholzmuster in hellen bis dunklen Tönen nebeneinander.",
+    "landoak-messingkante-glaenzend.jpg": "Holzplatte mit glänzender Messingkante und Schrauben auf Douglasienholz.",
+    "landoak-messingkante-matt-gebuerstet.jpg": "Tischkante mit matt gebürsteter Messingkante und Schraube über gelben Beinen.",
+    "landoak-messingkante-matt.jpg": "Rosa Platte mit matter Messingkante und Schrauben.",
+    "landoak-holzfarben.jpg": "Farbmuster in Pastelltönen auf einer Eichenplatte.",
+    "landoak-loobook-impressionen-1.jpg": "Landoak-Visitenkarte in einem Holzhalter auf einer abgeblätterten blauen Holzfläche."
+  }
+}

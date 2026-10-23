@@ -1,0 +1,16 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout pageKey="404" currentPage="">
+<section class="flex flex-col gap-xl px-gutter py-section-m">
+        <div class="mx-auto flex w-full max-w-site flex-col gap-s">
+          <h1>Seite nicht gefunden</h1>
+
+          <p>
+            Die angeforderte Seite existiert nicht oder wurde verschoben.
+          </p>
+
+          <a class="inline-flex w-max min-w-[8.75rem] cursor-pointer items-center justify-center rounded-base border-[1.5px] border-black bg-black px-[1.25em] py-[0.8em] text-center text-m leading-none text-white" href="/">Zur Startseite</a>
+        </div>
+      </section>
+</BaseLayout>

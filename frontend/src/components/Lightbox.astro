@@ -1,0 +1,23 @@
+---
+import type { Gallery } from '../lib/sections';
+interface Props { galleries: Record<string, Gallery> }
+const { galleries } = Astro.props;
+---
+<dialog class="m-0 size-full max-h-none max-w-none border-0 bg-black/95 p-m text-white backdrop:bg-transparent open:grid" aria-labelledby="lightbox-heading" data-gallery-dialog>
+  <div class="grid min-h-0 grid-rows-[auto_minmax(0,1fr)_auto] gap-s">
+    <div class="flex items-center justify-between gap-s">
+      <h2 class="text-h3 text-white" id="lightbox-heading"></h2>
+      <button class="cursor-pointer rounded-base border border-white/20 px-s py-xs transition-colors hover:bg-white/15" type="button" data-gallery-close autofocus>Schließen</button>
+    </div>
+    <figure class="m-0 grid min-h-0 grid-rows-[minmax(0,1fr)_auto] justify-items-center gap-xs">
+      <img class="size-full min-h-0 object-contain" alt="" data-gallery-image hidden />
+      <p class="self-center" role="alert" data-gallery-error hidden>Dieses Bild konnte nicht geladen werden. Bitte wählen Sie ein anderes Bild.</p>
+      <figcaption class="text-s" role="status" aria-live="polite" data-gallery-caption></figcaption>
+    </figure>
+    <div class="flex items-center justify-between gap-s">
+      <button class="cursor-pointer rounded-base border border-white/20 px-s py-xs transition-colors hover:bg-white/15" type="button" data-gallery-prev aria-label="Vorheriges Bild">← Zurück</button>
+      <button class="cursor-pointer rounded-base border border-white/20 px-s py-xs transition-colors hover:bg-white/15" type="button" data-gallery-next aria-label="Nächstes Bild">Weiter →</button>
+    </div>
+  </div>
+</dialog>
+<script type="application/json" id="gallery-data" set:html={JSON.stringify(galleries).replaceAll('<', '\\u003c')} />

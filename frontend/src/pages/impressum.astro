@@ -1,0 +1,67 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteImage from '../components/SiteImage.astro';
+---
+<BaseLayout pageKey="impressum" currentPage="impressum">
+<section class="flex flex-col gap-xl px-gutter py-section-m" aria-labelledby="impressum-heading">
+        <div class="mx-auto flex w-full max-w-site flex-col gap-xl">
+          <h1 id="impressum-heading">Impressum</h1>
+
+          <div class="@container">
+            <div class="grid grid-cols-[minmax(0,1fr)] gap-xl @min-[48rem]:grid-cols-2">
+              <div class="flex flex-col gap-l">
+                <div class="flex flex-col gap-s">
+                  <h2 class="text-h3">Angaben gemäß § 5 DDG</h2>
+                  <p>
+                    Hendrik Lampe Holzobjekte<br />
+                    Holstenkamp 46A<br />
+                    22525 Hamburg
+                  </p>
+                  <p>
+                    <strong class="font-medium text-black">Vertreten durch:</strong><br />
+                    Hendrik Lampe
+                  </p>
+                </div>
+
+                <div class="flex flex-col gap-s">
+                  <h2 class="text-h4">Kontakt</h2>
+                  <p>
+                    Telefon: <a class="underline underline-offset-2" href="tel:+49177277814">+49 177 277814</a><br />
+                    E-Mail: <a class="underline underline-offset-2" href="mailto:kontakt@hendrik-lampe.de">kontakt@hendrik-lampe.de</a>
+                  </p>
+                </div>
+
+                <div class="flex flex-col gap-s">
+                  <h2 class="text-h4">Redaktionell verantwortlich</h2>
+                  <p>
+                    Hendrik Lampe<br />
+                    Holstenkamp 46A<br />
+                    22525 Hamburg
+                  </p>
+                </div>
+              </div>
+
+              <div class="flex flex-col gap-l">
+                <div class="flex flex-col gap-s">
+                  <h2 class="text-h4">Verbraucherstreitbeilegung/Universalschlichtungsstelle</h2>
+                  <p>
+                    Wir nehmen an einem Streitbeilegungsverfahren vor einer Verbraucherschlichtungsstelle teil.
+                    Zuständig ist die Universalschlichtungsstelle des Zentrums für Schlichtung e.V.,
+                    Straßburger Straße 8, 77694 Kehl am Rhein
+                    (<a class="underline underline-offset-2" href="https://www.verbraucher-schlichter.de" target="_blank" rel="noopener noreferrer">https://www.verbraucher-schlichter.de</a>).
+                  </p>
+                </div>
+
+                <div class="flex flex-col gap-s">
+                  <h2 class="text-h4">Bildnachweise</h2>
+                  <p>© Hendrik Lampe Holzobjekte</p>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="flex justify-end">
+            <SiteImage source={"erecht24-impressum-siegel.png"} alt={"eRecht24-Siegel: Impressum für rechtssichere Webseiten"} class={"h-[105px] w-[250px] max-w-full"} />          </div>
+        </div>
+      </section>
+</BaseLayout>

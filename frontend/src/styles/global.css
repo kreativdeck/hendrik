@@ -1,0 +1,280 @@
+@import "tailwindcss" source(none);
+@source "../";
+@source "../../public/assets/icons";
+
+
+
+/* Fonts
+   ========================================================================== */
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("/assets/fonts/exo-2-v26-latin-300.woff2") format("woff2");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("/assets/fonts/exo-2-v26-latin-regular.woff2") format("woff2");
+  font-weight: 400;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("/assets/fonts/exo-2-v26-latin-500.woff2") format("woff2");
+  font-weight: 500;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("/assets/fonts/exo-2-v26-latin-600.woff2") format("woff2");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo 2";
+  src: url("/assets/fonts/exo-2-v26-latin-700.woff2") format("woff2");
+  font-weight: 700;
+  font-style: normal;
+  font-display: swap;
+}
+
+
+/* Theme
+   ========================================================================== */
+
+@theme {
+  --font-*: initial;
+  --font-sans: "Exo 2", sans-serif;
+
+  --color-*: initial;
+  --color-white: #fff;
+  --color-black: #3a3a3a;
+  --color-muted: color-mix(in srgb, var(--color-black) 80%, transparent);
+  --color-lion: #d2343a;
+  --color-tint-1: #acc2bf;
+  --color-tint-2: #b6d2ca;
+  --color-tint-3: #e4e5db;
+  --color-tint-4: #d3ccbe;
+  --color-tint-5: #ddd8cc;
+  --color-tint-6: #bfb59e;
+
+  --text-*: initial;
+  --text-xs: clamp(0.8125rem, calc(0.0994035785vw + 0.7901341948rem), 0.875rem);
+  --text-s: clamp(0.875rem, calc(0.0994035785vw + 0.8526341948rem), 0.9375rem);
+  --text-m: clamp(1rem, calc(0vw + 1rem), 1rem);
+  --text-l: clamp(1.2rem, calc(0.2115308151vw + 1.1524055666rem), 1.333rem);
+  --text-l--line-height: 1.3;
+  --text-xl: clamp(1.44rem, calc(0.5358075547vw + 1.3194433002rem), 1.776889rem);
+  --text-xxl: clamp(1.728rem, calc(1.0188358441vw + 1.4987619351rem), 2.368593037rem);
+  --text-h6: clamp(0.8125rem, calc(0.0994035785vw + 0.7901341948rem), 0.875rem);
+  --text-h5: clamp(0.875rem, calc(0.0994035785vw + 0.8526341948rem), 0.9375rem);
+  --text-h4: clamp(1.125rem, calc(0.1988071571vw + 1.0802683897rem), 1.25rem);
+  --text-h3: clamp(1.35rem, calc(0.5029821074vw + 1.2368290258rem), 1.66625rem);
+  --text-h2: clamp(1.62rem, calc(0.9560417495vw + 1.4048906064rem), 2.22111125rem);
+  --text-h1: clamp(1.944rem, calc(1.6170835726vw + 1.5801561962rem), 2.9607412963rem);
+
+  --spacing-xs: clamp(0.8333333333rem, calc(-0.0172384889vw + 0.8480506933rem), 0.8441720333rem);
+  --spacing-s: clamp(1.1252813203rem, calc(0.1983597291vw + 1.0806503813rem), 1.25rem);
+  --spacing-m: clamp(1.5rem, calc(0.5964214712vw + 1.365805169rem), 1.875rem);
+  --spacing-l: clamp(1.9995rem, calc(1.2930417495vw + 1.7085656064rem), 2.8125rem);
+  --spacing-xl: clamp(2.6653335rem, calc(2.4706425447vw + 2.1094389274rem), 4.21875rem);
+  --spacing-xxl: clamp(3.5528895555rem, calc(4.4138933511vw + 2.5597635515rem), 6.328125rem);
+
+  --spacing-section-xs: clamp(1.6883440665rem, calc(1.2909040692vw + 1.3978906509rem), 2.5rem);
+  --spacing-section-s: clamp(2.2505626407rem, calc(2.3847910288vw + 1.7139846592rem), 3.75rem);
+  --spacing-section-m: clamp(3rem, calc(4.1749502982vw + 2.0606361829rem), 5.625rem);
+  --spacing-section-l: clamp(3.999rem, calc(7.0592445328vw + 2.4106699801rem), 8.4375rem);
+  --spacing-section-xl: clamp(5.330667rem, calc(11.6510266402vw + 2.709186006rem), 12.65625rem);
+  --spacing-section-xxl: clamp(7.105779111rem, calc(18.8923990282vw + 2.8549893296rem), 18.984375rem);
+
+  --spacing-gutter: clamp(1rem, calc(6.3618290258vw - 0.4314115308rem), 5rem);
+
+  --container-*: initial;
+  --container-site: 85.375rem;
+
+  --radius-*: initial;
+  --radius-base: 5px;
+
+  --breakpoint-*: initial;
+
+  --default-transition-duration: 0.3s;
+  --default-transition-timing-function: ease-in-out;
+}
+
+
+/* Zustände, die vom JavaScript als Klassen gesetzt werden
+   ========================================================================== */
+
+@custom-variant ready (&:where(.is-ready, .is-ready *));
+@custom-variant compact (&:where(.is-compact, .is-compact *));
+@custom-variant nav-open (&:where(.is-open, .is-open *));
+@custom-variant slid-up (&:where(.is-hidden));
+@custom-variant animated (&:where(.is-animated, .is-animated *));
+@custom-variant pending (&:where([data-header]:not(.is-ready) *));
+
+
+/* Base
+   ========================================================================== */
+
+@layer base {
+  html {
+    font-size: 100%;
+  }
+
+  body {
+    min-block-size: 100svh;
+    font-size: 16px;
+    font-weight: 300;
+    line-height: 1.4;
+    text-wrap: pretty;
+    color: var(--color-muted);
+    background: var(--color-white);
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+    overflow-x: clip;
+  }
+
+  body.has-open-navigation,
+  body:has(dialog[open]) {
+    overflow: hidden;
+  }
+
+  /* Keep unbroken legal terms and URLs readable on narrow screens. */
+  main {
+    overflow-wrap: anywhere;
+  }
+
+  :root {
+    --heading-color: var(--color-black);
+  }
+
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    color: var(--heading-color);
+    font-weight: 500;
+    line-height: calc(4px + 2ex);
+    text-wrap: balance;
+  }
+
+  h1 {
+    font-size: var(--text-h1);
+  }
+
+  h2 {
+    font-size: var(--text-h2);
+  }
+
+  h3 {
+    font-size: var(--text-h3);
+  }
+
+  h4 {
+    font-size: var(--text-h4);
+  }
+
+  h5 {
+    font-size: var(--text-h5);
+  }
+
+  h6 {
+    font-size: var(--text-h6);
+  }
+
+  :focus-visible {
+    outline: 2px solid currentColor;
+    outline-offset: 2px;
+  }
+}
+
+
+/* Utilities
+   ========================================================================== */
+
+@layer components {
+  [data-submenu-toggle] svg,
+  [data-nav-icon] {
+    filter: grayscale(1);
+  }
+
+  [data-nav-icon] {
+    color: #000;
+  }
+
+  nav a[aria-current="page"],
+  [data-header-contact][aria-current="page"],
+  [data-submenu-toggle][data-active="true"] {
+    color: var(--color-lion);
+  }
+}
+
+/* Listing-/Card-Grid: Spaltenzahl ergibt sich aus --min und --max-cols. */
+@utility grid-intrinsic {
+  grid-template-columns: repeat(
+    auto-fill,
+    minmax(
+      max(
+        min(var(--min), 100%),
+        (100% - (var(--max-cols) - 1) * var(--spacing-m)) / var(--max-cols)
+      ),
+      1fr
+    )
+  );
+}
+
+/* Abstände für redaktionellen HTML-Inhalt, der nicht mit Klassen versehen werden kann. */
+@utility smart-spacing {
+  & > * + * {
+    margin-block-start: 1em;
+  }
+
+  & > * + :where(h1, h2, h3, h4, h5, h6) {
+    margin-block-start: 1.2em;
+  }
+
+  & > :is(ul, ol) {
+    padding-inline-start: 2em;
+  }
+
+  & > ul {
+    list-style: disc;
+  }
+
+  & > ol {
+    list-style: decimal;
+  }
+
+  & > :is(ul, ol) > li + li {
+    margin-block-start: 0.5em;
+  }
+
+  & > :is(ul, ol) :is(ul, ol) {
+    margin-block-start: 0.5em;
+    padding-inline-start: 1em;
+  }
+
+  & figcaption {
+    margin-block-start: 0.5em;
+  }
+
+  & > blockquote > * + * {
+    margin-block-start: 1em;
+  }
+
+  & a {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+}

@@ -1,0 +1,23 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteImage from '../components/SiteImage.astro';
+import Hero from '../components/Hero.astro';
+---
+<BaseLayout pageKey="ueber-uns" currentPage="ueber-uns">
+<Hero image={"Two Stripes Oak/holzmoebel-two-stripes-oak-sitzbank-hendrik-lampe.jpg"} alt={"Langer Tisch mit Sitzbank aus Eiche mit dunklem Streifen vor einer hellen Wand."} title={"Über Holzobjekte"} />
+
+      <section class="flex flex-col gap-xl px-gutter py-section-m" aria-labelledby="about-heading">
+        <div class="@container mx-auto w-full max-w-site">
+          <h2 id="about-heading" class="sr-only">Hendrik Lampe Holzobjekte</h2>
+          <div class="grid grid-cols-[minmax(0,1fr)] items-center gap-xl @min-[48rem]:grid-cols-2">
+            <SiteImage source={"hendrik-lampe-portrait-holzobjekte.jpg"} sizes={"(min-width: 48rem) 50vw, 100vw"} alt={"Schwarz-Weiß-Porträt von Hendrik Lampe mit Brille."} class={"w-full rounded-base object-cover"} />            <div class="flex flex-col items-start gap-m">
+              <p>Hendrik Lampe Holzobjekte entwirft, plant und fertigt seit 1994 Möbel, Einrichtungsgegenstände und Holzobjekte jeder Art. Dabei verarbeiten wir hauptsächlich Vollholz sowie Furnier, auch in Verbindung mit allen gängigen Platten- und Mineralwerkstoffen.</p>
+              <p>Wir gestalten und veredeln alle Möbel und Einrichtungsobjekte mit langjähriger Erfahrung durch eine große Vielfalt verschiedenster Handwerks- und Oberflächentechniken.</p>
+              <p>Unsere Handwerksleistungen stehen sowohl Privat- als auch Gewerbekunden zur Verfügung. Durch die Zusammenarbeit mit anderen Gewerken steht Ihren Wünschen nichts mehr im Wege.</p>
+              <p>Wir freuen uns auf Ihre Wünsche und Ideen und beraten Sie gern. Sprechen Sie uns doch einfach über unser Kontaktformular an oder besuchen Sie uns nach telefonischer Absprache in unserer Werkstatt.</p>
+              <a class="inline-flex w-max min-w-[8.75rem] cursor-pointer items-center justify-center rounded-base border-[1.5px] border-black bg-black px-[1.25em] py-[0.8em] text-center text-m leading-none text-white" href="/kontakt/">Kontakt aufnehmen</a>
+            </div>
+          </div>
+        </div>
+      </section>
+</BaseLayout>

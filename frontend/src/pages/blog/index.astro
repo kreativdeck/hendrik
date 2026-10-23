@@ -1,0 +1,18 @@
+---
+import BaseLayout from '../../layouts/BaseLayout.astro';
+import { posts, formatDate } from '../../lib/blog';
+---
+<BaseLayout pageKey="blog/index" currentPage="blog">
+  <section class="flex flex-col gap-xl px-gutter py-section-m">
+    <div class="mx-auto flex w-full max-w-site flex-col gap-s">
+      <h1>Blog</h1>
+      {posts.length === 0 ? <p>Es sind noch keine Beiträge vorhanden.</p> : posts.map((post) => (
+        <article class="flex flex-col gap-xs">
+          <h2><a class="underline-offset-2 hover:underline" href={'/blog/' + post.slug + '/'}>{post.title}</a></h2>
+          {post.date && <time class="text-s" datetime={post.date}>{formatDate(post.date)}</time>}
+          {post.description && <p>{post.description}</p>}
+        </article>
+      ))}
+    </div>
+  </section>
+</BaseLayout>

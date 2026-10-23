@@ -1,0 +1,13 @@
+node_modules/
+dist/
+.astro/
+.env
+.env.*
+!.env.example
+.DS_Store
+._*
+*.log
+*.tsbuildinfo
+
+# Lokale Referenz und Prüfartefakte der Migration
+.migration/

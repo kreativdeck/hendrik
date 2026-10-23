@@ -1,0 +1,38 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+<BaseLayout pageKey="kontakt" currentPage="kontakt">
+<section class="flex flex-col gap-xl px-gutter pt-section-m pb-section-s" aria-labelledby="kontakt-heading">
+        <div class="mx-auto flex w-full max-w-site flex-col items-center gap-m text-center">
+          <h1 id="kontakt-heading">Kontakt</h1>
+          <p class="max-w-[60ch] text-l">Schreiben Sie uns oder besuchen Sie uns nach Terminabsprache in unserer Werkstatt – wir freuen uns darauf, Sie kennen zu lernen.</p>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-xl px-gutter pt-0 pb-section-m" aria-labelledby="kontaktdaten-heading">
+        <div class="mx-auto w-full max-w-site">
+          <h2 id="kontaktdaten-heading" class="sr-only">Kontaktdaten</h2>
+          <div class="grid-intrinsic grid gap-m [--max-cols:3] [--min:16rem]">
+            <div class="flex flex-col items-center gap-s rounded-base border border-black/20 p-l text-center">
+              <h3 class="text-h4">Büro</h3>
+              <address class="text-l not-italic">
+                Holstenkamp 46A<br />
+                22525 Hamburg
+              </address>
+            </div>
+            <div class="flex flex-col items-center gap-s rounded-base border border-black/20 p-l text-center">
+              <h3 class="text-h4">Telefon</h3>
+              <address class="text-l not-italic">
+                <a class="underline underline-offset-2" href="tel:+49177277814">+49 177 277814</a>
+              </address>
+            </div>
+            <div class="flex flex-col items-center gap-s rounded-base border border-black/20 p-l text-center">
+              <h3 class="text-h4">E-Mail</h3>
+              <address class="text-l not-italic">
+                <a class="underline underline-offset-2" href="mailto:kontakt@hendrik-lampe.de">kontakt@hendrik-lampe.de</a>
+              </address>
+            </div>
+          </div>
+        </div>
+      </section>
+</BaseLayout>

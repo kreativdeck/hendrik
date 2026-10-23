@@ -1,0 +1,55 @@
+{
+  "section": {
+    "key": "about",
+    "label": "About",
+    "crumb": false
+  },
+  "categories": {
+    "lookbook": {
+      "masonry": true,
+      "label": "Landoak Lookbook",
+      "lead": "Impressionen unserer Arbeiten",
+      "introTitle": "Was man so alles findet, wenn man bei LANDOAK stöbert…",
+      "intro": [
+        "Hier haben wir für dich Impressionen von unseren LANDOAK Möbeln zusammengestellt. Lass dich von unserer Galerie inspirieren und dadurch eigene Ideen lebendig werden. Wie würde der Schrank in deinem Schlafzimmer aussehen? Welcher Tisch passt perfekt in deine Küche? Welche Farbe gefällt dir am besten? Welches Holz passt in dein Zuhause? Welche Bank könnte deinen Flur verschönern? Was kann man mit den LANDOAK Accessoires so alles machen? Anschauen, entdecken, träumen und mit Freunden teilen!"
+      ],
+      "folder": "Lookbook",
+      "cover": "Lookbook/landoak-loobook-impressionen-18.jpg",
+      "exclude": [
+        "landoak-loobook-impressionen-1.jpg"
+      ]
+    }
+  },
+  "descriptions": {
+    "landoak-loobook-impressionen-01.jpg": "Schokoladenkuchen auf einem Holzbrett mit türkisfarbener Kante, daneben Gabel und Tasse.",
+    "landoak-loobook-impressionen-1.jpg": "Landoak-Visitenkarte in einem Holzhalter auf einer abgeblätterten blauen Holzfläche.",
+    "landoak-loobook-impressionen-11.jpg": "Zeitschriftenhalter mit Heften an der Wand, eingefasst von Holzleisten.",
+    "landoak-loobook-impressionen-12.jpg": "Graue Heizungsverkleidung mit senkrechten Lamellen unter einer dunklen Ablage.",
+    "landoak-loobook-impressionen-13.jpg": "Graue Heizungsverkleidung vor einem Schaufenster mit schwarz-weißem Fliesenboden.",
+    "landoak-loobook-impressionen-14.jpg": "Tisch mit heller Eichenplatte und mintgrünen Beinen in einem Laden, dahinter blaue Vasen und Kleiderstangen.",
+    "landoak-loobook-impressionen-15.jpg": "Nahaufnahme einer hellen Tischplatte mit grünem Bein, dahinter blaue Vasen.",
+    "landoak-loobook-impressionen-16.jpg": "Nahaufnahme der profilierten Kante eines mintgrünen Möbels.",
+    "landoak-loobook-impressionen-17.jpg": "Heller Holztisch mit grünen Beinen vor Kleiderstangen und einem Regal, im Vordergrund ein Stuhl.",
+    "landoak-loobook-impressionen-18.jpg": "Heller Verkaufsraum mit Kleidung, Tisch mit Stühlen, Industrielampe und Regalen.",
+    "landoak-loobook-impressionen-19.jpg": "Verkaufsraum mit Fahrrädern, Teppich und einem Tisch mit Stühlen im Hintergrund.",
+    "landoak-loobook-impressionen-2.jpg": "Zeitschriftenhalter vor einer blauen Wand, darunter eine Holzanrichte mit Schubladen und ein Fahrradrahmen.",
+    "landoak-loobook-impressionen-20.jpg": "Offenes Regal mit Geschirr neben einem weißen Wandbord mit Haken und Strohtasche.",
+    "landoak-loobook-impressionen-21.jpg": "Verkaufsraum mit langem Tisch, Stühlen und Pendelleuchte vor einer Blumentapete.",
+    "landoak-loobook-impressionen-22.jpg": "Holzleiste mit Pflöcken, an der zwei Turnschuhe hängen, vor einer Holzwand.",
+    "landoak-loobook-impressionen-23.jpg": "Weißes Wandbord mit Holzpferd, Blumenstrauß und Flasche vor einer Holzwand.",
+    "landoak-loobook-impressionen-24.jpg": "Nahaufnahme einer Holzplatte mit Prägung und türkisfarbener Kante auf abgeblättertem Untergrund.",
+    "landoak-loobook-impressionen-25.jpg": "Metallscharnier an einer hellgrauen Schranktür.",
+    "landoak-loobook-impressionen-26.jpg": "Graue Wandkonsole unter einer Holzplatte vor einer Holzwand.",
+    "landoak-loobook-impressionen-27.jpg": "Fahrrad an der Wand über blauer Wandvertäfelung und Fliesenboden im Schachbrettmuster.",
+    "landoak-loobook-impressionen-28.jpg": "Verkaufsraum mit Kleiderstange und hohem hellem Schrank mit offenen Fächern.",
+    "landoak-loobook-impressionen-29.jpg": "Schlüssel mit Anhänger im Schloss einer hellblauen Schranktür.",
+    "landoak-loobook-impressionen-3.jpg": "Wandbord mit Weinflaschen und Lichtern vor einer blauen Wand.",
+    "landoak-loobook-impressionen-30.jpg": "Hoher heller Schrank mit offener Tür und Geschirr in den Fächern.",
+    "landoak-loobook-impressionen-31.jpg": "Lange Holzbank und Tisch mit Kissen, Brett und Accessoires in einem hellen Raum.",
+    "landoak-loobook-impressionen-4.jpg": "Verkaufsraum mit Zeitschriftenhalter, Schubladenschrank mit Schuhen und Fahrradrahmen.",
+    "landoak-loobook-impressionen-5.jpg": "Fahrräder im Vordergrund eines Verkaufsraums mit Teppich und Tisch.",
+    "landoak-loobook-impressionen-6.jpg": "Kleiner Schreibtisch mit Schublade vor einer blauen Wandvertäfelung.",
+    "landoak-loobook-impressionen-8.jpg": "Langer Holztisch mit Schneidebrett, Flaschen und Pflanze in einem hellen Raum.",
+    "landoak-loobook-impressionen-9.jpg": "Wandbord aus Holz mit Haken und einem Schuh vor einer Holzwand, schräg von unten."
+  }
+}

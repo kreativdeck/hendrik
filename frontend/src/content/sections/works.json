@@ -1,0 +1,42 @@
+{
+  "section": {
+    "key": "about",
+    "label": "About",
+    "crumb": false
+  },
+  "categories": {
+    "works": {
+      "label": "Unsere Werkstatt",
+      "lead": "Arbeiten mit Liebe zum Detail",
+      "introTitle": "Hier entstehen unsere Möbel",
+      "intro": [
+        "Hier wird gesägt, gehobelt, gehämmert und geleimt. Hier riecht es nach Spänen und frischem Holz. Hier schweben Ideen durch den Raum, die wir in unserem Team mit Leidenschaft zum Leben erwecken. Hier entstehen unsere LANDOAK Möbel in traditioneller Handarbeit mit viel Fachkenntnis, Sorgfalt und besonders viel Liebe zum Detail.",
+        "Du bist neugierig, möchtest unser Team kennenlernen und Dir einen Eindruck von unserer Arbeit verschaffen? Gerne laden wir Dich herzlich ein, uns nach Terminabsprache in unserer Werkstatt in Hamburg zu besuchen, um Dir einen Eindruck von unserer Arbeit zu verschaffen. Hier haben wir ein paar Eindrücke für Dich zusammengestellt."
+      ],
+      "folder": "Works",
+      "cover": "Works/landoak-works-19.jpg"
+    }
+  },
+  "descriptions": {
+    "landoak-works-1.jpg": "Verleimte Eichenplatte, mit Zwingen in einem Spannrahmen gespannt.",
+    "landoak-works-2.jpg": "Stirnholz eines Eichenbalkens mit eingesetztem Holzstück und einem Dübel.",
+    "landoak-works-3.jpg": "Stirnholz eines Eichenbalkens mit eingesetztem Holzstück und Gewindebohrung.",
+    "landoak-works-4.jpg": "Stemmeisen beim Ausarbeiten einer Zapfenverbindung in Eiche.",
+    "landoak-works-5.jpg": "Rohe Eichenbohle mit Baumkante in der Werkstatt, im Hintergrund eine Hobelmaschine.",
+    "landoak-works-6.jpg": "Gestapelte Nussbaumbohlen an einer Wand.",
+    "landoak-works-7.jpg": "Hölzernes Tischgestell aus Eiche mit Spanngurten und Zwingen.",
+    "landoak-works-8.jpg": "Alter Schlüssel im Schloss einer graublauen Tür.",
+    "landoak-works-9.jpg": "Messingscharnier an einer graublau lackierten Tür neben rohem Holz.",
+    "landoak-works-10.jpg": "Schrankrahmen mit graublauer Füllung in der Werkstatt, daneben eine Hobelmaschine.",
+    "landoak-works-11.jpg": "Gestapelte dicke Eichenbohlen auf einer Maschine.",
+    "landoak-works-12.jpg": "Verleimter Korpus mit graublauer Rückwand, mit vielen Zwingen gespannt.",
+    "landoak-works-13.jpg": "Lange Eichenbohle mit Baumkante vor einer Kreissäge.",
+    "landoak-works-14.jpg": "Eichenbohle mit natürlicher Kante auf dem Werkstattboden.",
+    "landoak-works-15.jpg": "Schrankkorpus in Graublau, mit Zwingen verleimt, auf Böcken in der Werkstatt.",
+    "landoak-works-16.jpg": "Zwei graublau lackierte Türblätter mit Beschlägen auf dem Boden.",
+    "landoak-works-17.jpg": "Tischgestell aus Eiche mit Zapfenverbindungen über einer Metallplatte.",
+    "landoak-works-18.jpg": "Werkstattecke mit grünen Tischgestellen, Hockern und Holzplatten.",
+    "landoak-works-19.jpg": "Drei Hocker in Graugrün mit Eichenplatten vor einer Werkzeugwand.",
+    "landoak-works-20.jpg": "Zwei Eichenplatten mit schmaler Fuge auf schlanken Beinen."
+  }
+}

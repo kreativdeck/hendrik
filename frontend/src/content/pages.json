@@ -1,0 +1,1917 @@
+{
+  "kontakt": {
+    "title": "Kontakt | Hendrik Lampe",
+    "description": "Kontakt zu Hendrik Lampe Holzobjekte in Hamburg: Büro, Telefon und E-Mail. Besuch in der Werkstatt nach Terminabsprache.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/kontakt/#webpage",
+          "url": "https://www.deinedomain.de/kontakt/",
+          "name": "Kontakt | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Kontakt zu Hendrik Lampe Holzobjekte in Hamburg: Büro, Telefon und E-Mail. Besuch in der Werkstatt nach Terminabsprache.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/kontakt/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Kontakt",
+              "item": "https://www.deinedomain.de/kontakt/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "404": {
+    "title": "Seite nicht gefunden | Meine Website",
+    "description": "Die angeforderte Seite wurde nicht gefunden.",
+    "noindex": true,
+    "schema": null
+  },
+  "index": {
+    "title": "Holzobjekte mit Charakter | Hendrik Lampe",
+    "description": "Individuelle Möbel und eigenständige Kollektionen von Hendrik Lampe. Holz, Form und Handwerk für Ihre Räume.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/#webpage",
+          "url": "https://www.deinedomain.de/",
+          "name": "Holzobjekte mit Charakter | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Individuelle Möbel und eigenständige Kollektionen von Hendrik Lampe. Holz, Form und Handwerk für Ihre Räume.",
+          "inLanguage": "de"
+        }
+      ]
+    }
+  },
+  "ueber-uns": {
+    "title": "Über Holzobjekte | Hendrik Lampe",
+    "description": "Hendrik Lampe Holzobjekte entwirft, plant und fertigt seit 1994 Möbel, Einrichtungsgegenstände und Holzobjekte jeder Art.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/ueber-uns/#webpage",
+          "url": "https://www.deinedomain.de/ueber-uns/",
+          "name": "Über Holzobjekte | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Hendrik Lampe Holzobjekte entwirft, plant und fertigt seit 1994 Möbel, Einrichtungsgegenstände und Holzobjekte jeder Art.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/ueber-uns/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Über Holzobjekte",
+              "item": "https://www.deinedomain.de/ueber-uns/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interior/arbeiten": {
+    "title": "Arbeiten | Hendrik Lampe",
+    "description": "Arbeitsplätze mit Charakter: Schreibtische, Regale, Garderoben und Meetingtische für Büro und Arbeitsplatz.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/interior/arbeiten/#webpage",
+          "url": "https://www.deinedomain.de/interior/arbeiten/",
+          "name": "Arbeiten | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Arbeitsplätze mit Charakter: Schreibtische, Regale, Garderoben und Meetingtische für Büro und Arbeitsplatz.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/interior/arbeiten/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Interior",
+              "item": "https://www.deinedomain.de/interior/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Arbeiten",
+              "item": "https://www.deinedomain.de/interior/arbeiten/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interior/wohnen": {
+    "title": "Wohnen | Hendrik Lampe",
+    "description": "Möbel für den Raum, in dem das Leben stattfindet: Tische, Kommoden und Wandschränke aus Holz, passend zu Deinem Zuhause gebaut.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/interior/wohnen/#webpage",
+          "url": "https://www.deinedomain.de/interior/wohnen/",
+          "name": "Wohnen | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Möbel für den Raum, in dem das Leben stattfindet: Tische, Kommoden und Wandschränke aus Holz, passend zu Deinem Zuhause gebaut.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/interior/wohnen/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Interior",
+              "item": "https://www.deinedomain.de/interior/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Wohnen",
+              "item": "https://www.deinedomain.de/interior/wohnen/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interior/kochen": {
+    "title": "Kochen | Hendrik Lampe",
+    "description": "Das Herz des Hauses verdient Holz: Einbauküchen, Küchenblöcke und Arbeitsplatten, gebaut für den täglichen Gebrauch.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/interior/kochen/#webpage",
+          "url": "https://www.deinedomain.de/interior/kochen/",
+          "name": "Kochen | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Das Herz des Hauses verdient Holz: Einbauküchen, Küchenblöcke und Arbeitsplatten, gebaut für den täglichen Gebrauch.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/interior/kochen/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Interior",
+              "item": "https://www.deinedomain.de/interior/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Kochen",
+              "item": "https://www.deinedomain.de/interior/kochen/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interior/essen": {
+    "title": "Essen | Hendrik Lampe",
+    "description": "Gemeinsam essen, lange sitzen, wiederkommen: Esstische, Tischbänke und Eckbänke aus Holz, individuell für Deinen Raum gefertigt.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/interior/essen/#webpage",
+          "url": "https://www.deinedomain.de/interior/essen/",
+          "name": "Essen | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Gemeinsam essen, lange sitzen, wiederkommen: Esstische, Tischbänke und Eckbänke aus Holz, individuell für Deinen Raum gefertigt.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/interior/essen/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Interior",
+              "item": "https://www.deinedomain.de/interior/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Essen",
+              "item": "https://www.deinedomain.de/interior/essen/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interior/schlafen": {
+    "title": "Schlafen | Hendrik Lampe",
+    "description": "Ruhige Betten und Kinderzimmer aus Holz: vom schlichten Holzbett bis zum Hochbett mit gepolsterter Rückwand.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/interior/schlafen/#webpage",
+          "url": "https://www.deinedomain.de/interior/schlafen/",
+          "name": "Schlafen | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Ruhige Betten und Kinderzimmer aus Holz: vom schlichten Holzbett bis zum Hochbett mit gepolsterter Rückwand.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/interior/schlafen/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Interior",
+              "item": "https://www.deinedomain.de/interior/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Schlafen",
+              "item": "https://www.deinedomain.de/interior/schlafen/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interior/baden": {
+    "title": "Baden | Hendrik Lampe",
+    "description": "Waschtische, Unterschränke und Ablagen, die zu Deinem Bad passen und Holz in den Raum bringen.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/interior/baden/#webpage",
+          "url": "https://www.deinedomain.de/interior/baden/",
+          "name": "Baden | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Waschtische, Unterschränke und Ablagen, die zu Deinem Bad passen und Holz in den Raum bringen.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/interior/baden/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Interior",
+              "item": "https://www.deinedomain.de/interior/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Baden",
+              "item": "https://www.deinedomain.de/interior/baden/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "leistungen": {
+    "title": "Leistungen | Meine Website",
+    "description": "Überblick über unsere Leistungen.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/leistungen/#webpage",
+          "url": "https://www.deinedomain.de/leistungen/",
+          "name": "Leistungen | Meine Website",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Überblick über unsere Leistungen.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/leistungen/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Leistungen",
+              "item": "https://www.deinedomain.de/leistungen/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "datenschutz": {
+    "title": "Datenschutzerklärung | Hendrik Lampe",
+    "description": "Informationen zur Verarbeitung personenbezogener Daten.",
+    "noindex": true,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/datenschutz/#webpage",
+          "url": "https://www.deinedomain.de/datenschutz/",
+          "name": "Datenschutzerklärung | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Informationen zur Verarbeitung personenbezogener Daten.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/datenschutz/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Datenschutz",
+              "item": "https://www.deinedomain.de/datenschutz/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "about/referenzen": {
+    "title": "Referenzen | Hendrik Lampe",
+    "description": "Referenzen: Kunden, für die Hendrik Lampe Möbel und Einrichtungen aus Holz gebaut hat.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/about/referenzen/#webpage",
+          "url": "https://www.deinedomain.de/about/referenzen/",
+          "name": "Referenzen | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Referenzen: Kunden, für die Hendrik Lampe Möbel und Einrichtungen aus Holz gebaut hat.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/about/referenzen/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Referenzen",
+              "item": "https://www.deinedomain.de/about/referenzen/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "about/works": {
+    "title": "Unsere Werkstatt | Hendrik Lampe",
+    "description": "Arbeiten mit Liebe zum Detail",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/about/works/#webpage",
+          "url": "https://www.deinedomain.de/about/works/",
+          "name": "Unsere Werkstatt | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Arbeiten mit Liebe zum Detail",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/about/works/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Unsere Werkstatt",
+              "item": "https://www.deinedomain.de/about/works/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "about/lookbook": {
+    "title": "Landoak Lookbook | Hendrik Lampe",
+    "description": "Impressionen unserer Arbeiten",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/about/lookbook/#webpage",
+          "url": "https://www.deinedomain.de/about/lookbook/",
+          "name": "Landoak Lookbook | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Impressionen unserer Arbeiten",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/about/lookbook/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Landoak Lookbook",
+              "item": "https://www.deinedomain.de/about/lookbook/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog/index": {
+    "title": "Blog | Meine Website",
+    "description": "Aktuelle Beiträge.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "Blog",
+          "@id": "https://www.deinedomain.de/blog/#blog",
+          "url": "https://www.deinedomain.de/blog/",
+          "name": "Blog | Meine Website",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Aktuelle Beiträge.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/blog/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.deinedomain.de/blog/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "two-stripes-oak": {
+    "title": "Two Stripes Oak | Hendrik Lampe",
+    "description": "Tisch, Sitzbänke und Stuhl aus Eiche, durchzogen von einem dunklen Streifen.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/two-stripes-oak/#webpage",
+          "url": "https://www.deinedomain.de/two-stripes-oak/",
+          "name": "Two Stripes Oak | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Tisch, Sitzbänke und Stuhl aus Eiche, durchzogen von einem dunklen Streifen.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/two-stripes-oak/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Two Stripes Oak",
+              "item": "https://www.deinedomain.de/two-stripes-oak/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "materials": {
+    "title": "Materials | Hendrik Lampe",
+    "description": "Materialien für Möbel von Hendrik Lampe: Holzarten, Oberflächen, Messingkanten und Farben.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/materials/#webpage",
+          "url": "https://www.deinedomain.de/materials/",
+          "name": "Materials | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Materialien für Möbel von Hendrik Lampe: Holzarten, Oberflächen, Messingkanten und Farben.",
+          "inLanguage": "de"
+        }
+      ]
+    }
+  },
+  "landoak/accessoires": {
+    "title": "Accessoires | Hendrik Lampe",
+    "description": "Kleine Dinge aus Holz für Alltag und Wand: Servierbretter, Kartenhalter, Garderobenleisten, Wandborde und Teelichthalter.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/landoak/accessoires/#webpage",
+          "url": "https://www.deinedomain.de/landoak/accessoires/",
+          "name": "Accessoires | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Kleine Dinge aus Holz für Alltag und Wand: Servierbretter, Kartenhalter, Garderobenleisten, Wandborde und Teelichthalter.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/landoak/accessoires/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Landoak",
+              "item": "https://www.deinedomain.de/landoak/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Accessoires",
+              "item": "https://www.deinedomain.de/landoak/accessoires/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "landoak/farben": {
+    "title": "Farben | Hendrik Lampe",
+    "description": "Die Holzfarben von Landoak: sanfte Pastelltöne, passend zu den Möbeln und Accessoires.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/landoak/farben/#webpage",
+          "url": "https://www.deinedomain.de/landoak/farben/",
+          "name": "Farben | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Die Holzfarben von Landoak: sanfte Pastelltöne, passend zu den Möbeln und Accessoires.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/landoak/farben/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Landoak",
+              "item": "https://www.deinedomain.de/landoak/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Farben",
+              "item": "https://www.deinedomain.de/landoak/farben/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "landoak/furniture": {
+    "title": "Furniture | Hendrik Lampe",
+    "description": "Möbel für ein Leben: Tische, Bänke, Hocker, Regale, Schränke und Heizungsverkleidungen der Serie Landoak.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/landoak/furniture/#webpage",
+          "url": "https://www.deinedomain.de/landoak/furniture/",
+          "name": "Furniture | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Möbel für ein Leben: Tische, Bänke, Hocker, Regale, Schränke und Heizungsverkleidungen der Serie Landoak.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/landoak/furniture/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Landoak",
+              "item": "https://www.deinedomain.de/landoak/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Furniture",
+              "item": "https://www.deinedomain.de/landoak/furniture/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "landoak": {
+    "title": "Landoak | Hendrik Lampe",
+    "description": "Landoak – Möbel für ein Leben: Möbel, Accessoires und Holzfarben der Serie.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/landoak/#webpage",
+          "url": "https://www.deinedomain.de/landoak/",
+          "name": "Landoak | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Landoak – Möbel für ein Leben: Möbel, Accessoires und Holzfarben der Serie.",
+          "inLanguage": "de"
+        }
+      ]
+    }
+  },
+  "materials/messingkanten": {
+    "title": "Messingkanten | Hendrik Lampe",
+    "description": "Messingkanten für Tischplatten und Bretter: glänzend, matt oder matt gebürstet.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/materials/messingkanten/#webpage",
+          "url": "https://www.deinedomain.de/materials/messingkanten/",
+          "name": "Messingkanten | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Messingkanten für Tischplatten und Bretter: glänzend, matt oder matt gebürstet.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/materials/messingkanten/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Materials",
+              "item": "https://www.deinedomain.de/materials/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Messingkanten",
+              "item": "https://www.deinedomain.de/materials/messingkanten/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "materials/oberflaechen": {
+    "title": "Oberflächen | Hendrik Lampe",
+    "description": "Oberflächen für Holz: glatt geschliffen oder sandgestrahlt.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/materials/oberflaechen/#webpage",
+          "url": "https://www.deinedomain.de/materials/oberflaechen/",
+          "name": "Oberflächen | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Oberflächen für Holz: glatt geschliffen oder sandgestrahlt.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/materials/oberflaechen/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Materials",
+              "item": "https://www.deinedomain.de/materials/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Oberflächen",
+              "item": "https://www.deinedomain.de/materials/oberflaechen/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "materials/holzarten": {
+    "title": "Holzarten | Hendrik Lampe",
+    "description": "Die Holzarten Douglasie, Eiche und Nussbaum, jede mit eigener Maserung und Farbe.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/materials/holzarten/#webpage",
+          "url": "https://www.deinedomain.de/materials/holzarten/",
+          "name": "Holzarten | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Die Holzarten Douglasie, Eiche und Nussbaum, jede mit eigener Maserung und Farbe.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/materials/holzarten/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Materials",
+              "item": "https://www.deinedomain.de/materials/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Holzarten",
+              "item": "https://www.deinedomain.de/materials/holzarten/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "materials/farben": {
+    "title": "Farben | Hendrik Lampe",
+    "description": "Holzfarben in sanften Pastelltönen auf Eichenholz.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/materials/farben/#webpage",
+          "url": "https://www.deinedomain.de/materials/farben/",
+          "name": "Farben | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Holzfarben in sanften Pastelltönen auf Eichenholz.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/materials/farben/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Materials",
+              "item": "https://www.deinedomain.de/materials/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Farben",
+              "item": "https://www.deinedomain.de/materials/farben/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interior": {
+    "title": "Interior | Hendrik Lampe",
+    "description": "Individuelle Möbel und Einrichtungen für Wohnen, Kochen, Essen, Schlafen, Baden und Arbeiten.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/interior/#webpage",
+          "url": "https://www.deinedomain.de/interior/",
+          "name": "Interior | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Individuelle Möbel und Einrichtungen für Wohnen, Kochen, Essen, Schlafen, Baden und Arbeiten.",
+          "inLanguage": "de"
+        }
+      ]
+    }
+  },
+  "impressum": {
+    "title": "Impressum | Hendrik Lampe",
+    "description": "Angaben gemäß gesetzlicher Anbieterkennzeichnung.",
+    "noindex": true,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/impressum/#webpage",
+          "url": "https://www.deinedomain.de/impressum/",
+          "name": "Impressum | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Angaben gemäß gesetzlicher Anbieterkennzeichnung.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/impressum/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Impressum",
+              "item": "https://www.deinedomain.de/impressum/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog/erster-beitrag": {
+    "title": "Mein erster Blogbeitrag | Meine Website",
+    "description": "Eine kurze Zusammenfassung für Suchmaschinen.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.deinedomain.de/blog/erster-beitrag/#blogposting",
+          "url": "https://www.deinedomain.de/blog/erster-beitrag/",
+          "headline": "Mein erster Blogbeitrag",
+          "mainEntityOfPage": "https://www.deinedomain.de/blog/erster-beitrag/",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Eine kurze Zusammenfassung für Suchmaschinen.",
+          "datePublished": "2026-09-19",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/blog/erster-beitrag/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.deinedomain.de/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Mein erster Blogbeitrag",
+              "item": "https://www.deinedomain.de/blog/erster-beitrag/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "blog/zweiter-beitrag": {
+    "title": "Mein zweiter Blogbeitrag | Meine Website",
+    "description": "Eine kurze Zusammenfassung für Suchmaschinen.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BlogPosting",
+          "@id": "https://www.deinedomain.de/blog/zweiter-beitrag/#blogposting",
+          "url": "https://www.deinedomain.de/blog/zweiter-beitrag/",
+          "headline": "Mein zweiter Blogbeitrag",
+          "mainEntityOfPage": "https://www.deinedomain.de/blog/zweiter-beitrag/",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Eine kurze Zusammenfassung für Suchmaschinen.",
+          "datePublished": "2026-09-19",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/blog/zweiter-beitrag/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Blog",
+              "item": "https://www.deinedomain.de/blog/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Mein zweiter Blogbeitrag",
+              "item": "https://www.deinedomain.de/blog/zweiter-beitrag/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "interior/holzobjekte": {
+    "title": "Holzobjekte | Hendrik Lampe",
+    "description": "Individuelle Holzobjekte und Wohnaccessoires: von Bänken und Regalen bis zu Verkleidungen und kleinen Details.",
+    "noindex": false,
+    "schema": {
+      "@context": "https://schema.org",
+      "@graph": [
+        {
+          "@type": "Organization",
+          "@id": "https://www.deinedomain.de/#organization",
+          "name": "Hendrik Lampe Holzobjekte",
+          "url": "https://www.deinedomain.de/",
+          "alternateName": "Hendrik Lampe",
+          "email": "kontakt@hendrik-lampe.de",
+          "telephone": "+49 177 277814",
+          "address": {
+            "@type": "PostalAddress",
+            "streetAddress": "Holstenkamp 46A",
+            "postalCode": "22525",
+            "addressLocality": "Hamburg",
+            "addressCountry": "DE"
+          }
+        },
+        {
+          "@type": "WebSite",
+          "@id": "https://www.deinedomain.de/#website",
+          "url": "https://www.deinedomain.de/",
+          "name": "Hendrik Lampe Holzobjekte",
+          "publisher": {
+            "@id": "https://www.deinedomain.de/#organization"
+          },
+          "inLanguage": "de"
+        },
+        {
+          "@type": "WebPage",
+          "@id": "https://www.deinedomain.de/interior/holzobjekte/#webpage",
+          "url": "https://www.deinedomain.de/interior/holzobjekte/",
+          "name": "Holzobjekte | Hendrik Lampe",
+          "isPartOf": {
+            "@id": "https://www.deinedomain.de/#website"
+          },
+          "description": "Individuelle Holzobjekte und Wohnaccessoires: von Bänken und Regalen bis zu Verkleidungen und kleinen Details.",
+          "inLanguage": "de"
+        },
+        {
+          "@type": "BreadcrumbList",
+          "@id": "https://www.deinedomain.de/interior/holzobjekte/#breadcrumb",
+          "itemListElement": [
+            {
+              "@type": "ListItem",
+              "position": 1,
+              "name": "Start",
+              "item": "https://www.deinedomain.de/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 2,
+              "name": "Interior",
+              "item": "https://www.deinedomain.de/interior/"
+            },
+            {
+              "@type": "ListItem",
+              "position": 3,
+              "name": "Holzobjekte",
+              "item": "https://www.deinedomain.de/interior/holzobjekte/"
+            }
+          ]
+        }
+      ]
+    }
+  },
+  "formcultur": {
+    "title": "Formcultur | Hendrik Lampe",
+    "description": "Formcultur von Hendrik Lampe: die Polsterliege Løvseth mit Holzgestell und seitlicher Ablage. Bilder in Grau und Gelb entdecken.",
+    "noindex": false,
+    "schema": null
+  },
+  "formcultur/lovseth": {
+    "title": "Løvseth | Hendrik Lampe",
+    "description": "Polsterliege mit Holzgestell und seitlicher Ablage – in Grau und Gelb, mit aufgestelltem oder flach gelegtem Rückenteil.",
+    "noindex": false,
+    "schema": null
+  },
+  "formcultur/solveig": {
+    "title": "Solveig | Hendrik Lampe",
+    "description": "Solveig von Hendrik Lampe: Die Seite zur Formcultur-Reihe ist in Vorbereitung. Coming Soon.",
+    "noindex": true,
+    "schema": null
+  }
+}

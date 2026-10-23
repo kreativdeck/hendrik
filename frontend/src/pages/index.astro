@@ -1,0 +1,73 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import SiteImage from '../components/SiteImage.astro';
+import Hero from '../components/Hero.astro';
+import lion from '../../public/assets/icons/lion.svg?raw';
+---
+<BaseLayout pageKey="index" currentPage="home">
+<Hero image={"Holzobjekte/Holzobjekte/holzmoebel-wohnaccessoires-baenke-hendrik-lampe.jpg"} alt={"Holzbänke und Hocker in unterschiedlichen Größen vor einer hellen Wand."} title={"Holzobjekte mit Charakter."} />
+
+      <section class="flex flex-col gap-xl px-gutter py-section-m" aria-labelledby="intro-heading">
+        <div class="mx-auto flex w-full max-w-site flex-col items-center gap-m text-center">
+          <p class="text-s">Hendrik Lampe · Holzobjekte</p>
+          <h2 id="intro-heading">Für Räume. Für Menschen. Fürs Leben.</h2>
+          <p class="max-w-[calc(var(--container-site)/2)] text-l">Von individuellen Einrichtungen bis zu eigenen Möbelserien: Holz, Form und Handwerk finden hier zusammen.</p>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-xl px-gutter py-section-m" aria-labelledby="works-heading">
+        <div class="@container mx-auto flex w-full max-w-site flex-col gap-xl">
+          <h2 id="works-heading">Holz in seiner ganzen Vielfalt.</h2>
+          <div class="grid grid-cols-[minmax(0,1fr)] gap-m @min-[64rem]:aspect-[890/360] @min-[64rem]:grid-cols-[minmax(0,2fr)_repeat(2,minmax(0,1fr))] @min-[64rem]:grid-rows-[repeat(2,minmax(0,1fr))]">
+            <a class="group/card relative grid [--heading-color:var(--color-white)] aspect-[890/360] min-h-0 min-w-0 grid-cols-[minmax(0,1fr)] overflow-hidden rounded-base text-white before:z-1 before:col-start-1 before:row-start-1 before:bg-linear-to-t/srgb before:from-black/80 before:to-transparent before:content-[''] motion-safe:transition-transform motion-safe:active:scale-[0.99] @min-[64rem]:aspect-auto [&>picture]:absolute [&>picture]:inset-0 [&>picture]:size-full @min-[64rem]:row-span-2" href="/interior/">
+              <SiteImage source={"Holzobjekte/Wohnen/holzmoebel-wohnzimmer-tisch-sitzbank-hendrik-lampe.jpg"} sizes={"(min-width: 80rem) 50vw, 100vw"} alt={""} class={"absolute inset-0 size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-hover/card:scale-[1.025] motion-safe:group-focus-visible/card:scale-[1.025]"} />              <h3 class="z-2 col-start-1 row-start-1 self-end p-m text-h4 underline decoration-transparent underline-offset-2 motion-safe:transition-[text-decoration-color] group-hover/card:decoration-current group-focus-visible/card:decoration-current">Interior – Möbel &amp; Holzobjekte</h3>
+            </a>
+            <a class="group/card relative grid [--heading-color:var(--color-white)] aspect-[890/360] min-h-0 min-w-0 grid-cols-[minmax(0,1fr)] overflow-hidden rounded-base text-white before:z-1 before:col-start-1 before:row-start-1 before:bg-linear-to-t/srgb before:from-black/80 before:to-transparent before:content-[''] motion-safe:transition-transform motion-safe:active:scale-[0.99] @min-[64rem]:aspect-auto [&>picture]:absolute [&>picture]:inset-0 [&>picture]:size-full @min-[64rem]:col-span-2" href="/formcultur/">
+              <SiteImage source={"Materialen/Holzarten/Eiche/landoak-holzarten-eiche.jpg"} sizes={"(min-width: 80rem) 50vw, 100vw"} alt={""} class={"absolute inset-0 size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-hover/card:scale-[1.025] motion-safe:group-focus-visible/card:scale-[1.025]"} />              <h3 class="z-2 col-start-1 row-start-1 self-end p-m text-h4 underline decoration-transparent underline-offset-2 motion-safe:transition-[text-decoration-color] group-hover/card:decoration-current group-focus-visible/card:decoration-current">Formcultur</h3>
+            </a>
+            <a class="group/card relative grid [--heading-color:var(--color-white)] aspect-[890/360] min-h-0 min-w-0 grid-cols-[minmax(0,1fr)] overflow-hidden rounded-base text-white before:z-1 before:col-start-1 before:row-start-1 before:bg-linear-to-t/srgb before:from-black/80 before:to-transparent before:content-[''] motion-safe:transition-transform motion-safe:active:scale-[0.99] @min-[64rem]:aspect-auto [&>picture]:absolute [&>picture]:inset-0 [&>picture]:size-full" href="/landoak/">
+              <SiteImage source={"Lookbook/landoak-loobook-impressionen-14.jpg"} sizes={"(min-width: 80rem) 25vw, 100vw"} alt={""} class={"absolute inset-0 size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-hover/card:scale-[1.025] motion-safe:group-focus-visible/card:scale-[1.025]"} />              <h3 class="z-2 col-start-1 row-start-1 self-end p-m text-h4 underline decoration-transparent underline-offset-2 motion-safe:transition-[text-decoration-color] group-hover/card:decoration-current group-focus-visible/card:decoration-current">Landoak</h3>
+            </a>
+            <a class="group/card relative grid [--heading-color:var(--color-white)] aspect-[890/360] min-h-0 min-w-0 grid-cols-[minmax(0,1fr)] overflow-hidden rounded-base text-white before:z-1 before:col-start-1 before:row-start-1 before:bg-linear-to-t/srgb before:from-black/80 before:to-transparent before:content-[''] motion-safe:transition-transform motion-safe:active:scale-[0.99] @min-[64rem]:aspect-auto [&>picture]:absolute [&>picture]:inset-0 [&>picture]:size-full" href="/two-stripes-oak/">
+              <SiteImage source={"Two Stripes Oak/holzmoebel-two-stripes-oak-sitzbank-hendrik-lampe.jpg"} sizes={"(min-width: 80rem) 25vw, 100vw"} alt={""} class={"absolute inset-0 size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-hover/card:scale-[1.025] motion-safe:group-focus-visible/card:scale-[1.025]"} />              <h3 class="z-2 col-start-1 row-start-1 self-end p-m text-h4 underline decoration-transparent underline-offset-2 motion-safe:transition-[text-decoration-color] group-hover/card:decoration-current group-focus-visible/card:decoration-current">Two Stripes Oak</h3>
+            </a>
+          </div>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-xl px-gutter py-section-m" aria-labelledby="values-heading">
+        <div class="mx-auto flex w-full max-w-site flex-col gap-xl">
+          <h2 class="text-center" id="values-heading">Was meine Arbeit ausmacht.</h2>
+          <ul class="grid-intrinsic grid gap-m [--max-cols:4] [--min:24ch]">
+            <li class="flex flex-col items-center gap-s border-t border-black/20 pt-m text-center [&>svg]:h-auto [&>svg]:w-l">
+              <Fragment set:html={lion} />
+              <h3 class="text-h4">Handmade</h3>
+              <p>Mit der Hand gearbeitet. Mit Blick fürs Detail.</p>
+            </li>
+            <li class="flex flex-col items-center gap-s border-t border-black/20 pt-m text-center [&>svg]:h-auto [&>svg]:w-l">
+              <Fragment set:html={lion} />
+              <h3 class="text-h4">Traditionell</h3>
+              <p>Bewährtes Handwerk trifft auf eigene Formen.</p>
+            </li>
+            <li class="flex flex-col items-center gap-s border-t border-black/20 pt-m text-center [&>svg]:h-auto [&>svg]:w-l">
+              <Fragment set:html={lion} />
+              <h3 class="text-h4">Materialien</h3>
+              <p>Die natürliche Struktur des Holzes prägt jedes Stück.</p>
+            </li>
+            <li class="flex flex-col items-center gap-s border-t border-black/20 pt-m text-center [&>svg]:h-auto [&>svg]:w-l">
+              <Fragment set:html={lion} />
+              <h3 class="text-h4">Individuell</h3>
+              <p>Möbel und Einrichtungen, die zu Ihren Räumen passen.</p>
+            </li>
+          </ul>
+        </div>
+      </section>
+
+      <section class="flex flex-col gap-xl px-gutter py-section-m" aria-labelledby="contact-heading">
+        <div class="mx-auto flex w-full max-w-site flex-col items-center gap-m text-center">
+          <h2 id="contact-heading">Was möchten Sie aus Holz machen?</h2>
+          <p>Erzählen Sie mir von Ihrer Idee.</p>
+          <a class="inline-flex w-max min-w-[8.75rem] cursor-pointer items-center justify-center rounded-base border-[1.5px] border-black bg-black px-[1.25em] py-[0.8em] text-center text-m leading-none text-white" href="/kontakt/">Kontakt aufnehmen</a>
+        </div>
+      </section>
+</BaseLayout>

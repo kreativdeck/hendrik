@@ -1,0 +1,52 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { sectionMeta } from '../lib/seo';
+import Hero from './Hero.astro';
+import SiteImage from './SiteImage.astro';
+import Lightbox from './Lightbox.astro';
+import { galleryFor, type SectionData } from '../lib/sections';
+import type pages from '../content/pages.json';
+interface Props { data: SectionData; pageKey: keyof typeof pages; areaKey: string }
+const { data, pageKey, areaKey } = Astro.props;
+const { section } = data;
+const area = data.categories[areaKey]!;
+const gallery = galleryFor(data, areaKey);
+const paragraphs = area.intro ? (Array.isArray(area.intro) ? area.intro : [area.intro]) : [];
+const currentPage = section.single ? section.key : section.key + '/' + areaKey;
+---
+<BaseLayout meta={sectionMeta(data, areaKey)} pageKey={pageKey} currentPage={currentPage}>
+  <Hero image={area.cover} alt={data.descriptions[area.cover.split('/').at(-1)!]!} title={area.label} />
+  {paragraphs.length > 0 && (area.introTitle ? (
+    <section class="flex flex-col px-gutter pt-section-m" aria-labelledby="intro-heading">
+      <div class="@container mx-auto w-full max-w-site">
+        <div class="flex flex-col gap-l">
+          <h2 id="intro-heading">{area.introTitle}</h2>
+          <div class="@min-[48rem]:columns-2 @min-[48rem]:gap-xl [&>p+p]:mt-m">
+            {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+          </div>
+        </div>
+      </div>
+    </section>
+  ) : (
+    <section class="flex flex-col px-gutter pt-section-m">
+      <div class="mx-auto flex w-full max-w-[75ch] flex-col gap-m text-center">
+        {paragraphs.map((paragraph) => <p>{paragraph}</p>)}
+      </div>
+    </section>
+  ))}
+  <section class="flex flex-col gap-xl px-gutter py-section-m" aria-labelledby="gallery-heading">
+    <div class="mx-auto flex w-full max-w-site flex-col">
+      <h2 id="gallery-heading" class="sr-only">Bilder: {area.label}</h2>
+      <ul class={area.masonry ? 'columns-[18rem] gap-m' : 'grid-intrinsic grid gap-m [--max-cols:4] [--min:16rem]'}>
+        {gallery.images.map((image, index) => (
+          <li class:list={[area.masonry && 'mb-m break-inside-avoid', area.item]}>
+            <button class:list={['group/thumb block', !area.masonry && 'aspect-square [&>picture]:size-full', 'w-full cursor-pointer overflow-hidden rounded-base disabled:cursor-default [&>picture]:block']} type="button" data-gallery-trigger={areaKey} data-gallery-index={index} aria-haspopup="dialog" disabled>
+              <SiteImage source={image.source} alt={image.alt} class={(area.masonry ? 'h-auto w-full' : 'size-full') + ' rounded-base ' + (area.fit ?? 'object-cover') + ' motion-safe:transition-transform motion-safe:group-enabled/thumb:group-hover/thumb:scale-[1.025] motion-safe:group-focus-visible/thumb:scale-[1.025]'} sizes="(min-width: 64rem) 25vw, (min-width: 38rem) 33vw, 50vw" />
+            </button>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </section>
+  <Lightbox galleries={{ [areaKey]: gallery }} />
+</BaseLayout>

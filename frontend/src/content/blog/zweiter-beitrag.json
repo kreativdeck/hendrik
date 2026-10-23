@@ -1,0 +1,7 @@
+{
+  "title": "Mein zweiter Blogbeitrag",
+  "date": "2026-09-19",
+  "description": "Eine kurze Zusammenfassung für Suchmaschinen.",
+  "content": "<p>Hier steht der eigentliche Fließtext des ersten Beitrags.</p>\n\n<h2>Eine Zwischenüberschrift</h2>\n\n<p>Hier steht weiterer Inhalt des Beitrags.</p>",
+  "slug": "zweiter-beitrag"
+}
