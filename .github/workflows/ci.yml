@@ -1,0 +1,131 @@
+name: CI
+
+# Prüft Astro-Projekt (Check, Build, Parity) und stellt frontend/dist als Artifact bereit.
+# Der Job "deploy" (FTPS, siehe deployment/README.md) ist inaktiv, solange die Repository-Variable
+# DEPLOY_ENABLED nicht exakt 'true' ist. Er läuft nie für Pull Requests.
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: ci-${{ github.workflow }}-${{ github.event.pull_request.number || github.ref }}
+  # Nur Pull-Request-Läufe werden ersetzt; Läufe auf main (und damit ein laufendes Deploy) nie.
+  cancel-in-progress: ${{ github.event_name == 'pull_request' }}
+
+jobs:
+  build:
+    name: Check, Build, Parity
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    defaults:
+      run:
+        working-directory: frontend
+    env:
+      # Repository-Variable SITE_URL (Settings > Secrets and variables > Actions > Variables);
+      # ohne Variable (auch in Fork-PRs) gilt die Staging-Adresse. Keine Zugangsdaten.
+      SITE_URL: ${{ vars.SITE_URL || 'https://hendrik.kreativdeck.dev' }}
+      ASTRO_TELEMETRY_DISABLED: '1'
+    steps:
+      - name: Checkout
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+
+      - name: Node.js einrichten
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          cache: npm
+          cache-dependency-path: frontend/package-lock.json
+
+      - name: SITE_URL prüfen
+        run: |
+          case "$SITE_URL" in
+            http://*|https://*) echo "SITE_URL: $SITE_URL" ;;
+            *) echo "::error::SITE_URL muss mit http:// oder https:// beginnen"; exit 1 ;;
+          esac
+
+      - name: Abhängigkeiten installieren
+        run: npm ci
+
+      - name: Astro- und TypeScript-Prüfung
+        run: npm run check
+
+      - name: Statische Website bauen
+        run: npm run build
+
+      - name: Parity-Prüfung
+        run: npm run test:parity
+
+      - name: Inhalt von dist prüfen
+        run: |
+          test -f dist/.htaccess || { echo "::error::dist/.htaccess fehlt"; exit 1; }
+          unwanted=$(find dist \( -name '._*' -o -name '.DS_Store' -o -name '.env*' -o -name node_modules \) -print)
+          if [ -n "$unwanted" ]; then
+            echo "::error::Unerwünschte Dateien in dist:"
+            echo "$unwanted"
+            exit 1
+          fi
+
+      - name: Deployment-Skript testen
+        working-directory: .
+        run: python3 -m unittest discover -s deployment -p 'test_*.py'
+
+      - name: Artifact hochladen
+        uses: actions/upload-artifact@cf430e030ddbb5b0abf93d22962f4752f3646cd9 # v7.0.2
+        with:
+          name: website-dist-${{ github.sha }}
+          path: frontend/dist
+          include-hidden-files: true
+          if-no-files-found: error
+          retention-days: 14
+
+  deploy:
+    name: Deploy (FTPS)
+    needs: build
+    # Nur Push/manueller Start auf main und nur bei DEPLOY_ENABLED == 'true' (sonst übersprungen).
+    if: >-
+      github.ref == 'refs/heads/main' &&
+      (github.event_name == 'push' || github.event_name == 'workflow_dispatch') &&
+      vars.DEPLOY_ENABLED == 'true'
+    runs-on: ubuntu-latest
+    timeout-minutes: 30
+    permissions:
+      contents: read
+    concurrency:
+      group: deploy-hendrik-production
+      cancel-in-progress: false
+    steps:
+      - name: Checkout (nur Deployment-Skript, gleicher Commit)
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          ref: ${{ github.sha }}
+          sparse-checkout: deployment
+          persist-credentials: false
+
+      - name: Geprüftes Build-Artifact herunterladen
+        uses: actions/download-artifact@9000827ccba6bdab643e8b6fd33ac0654aef8333 # v8.0.2
+        with:
+          name: website-dist-${{ github.sha }}
+          path: ${{ runner.temp }}/website-dist
+          digest-mismatch: error
+
+      # Zugangsdaten nur als Umgebungsvariablen dieses Schritts, nie in der Shell-Interpolation.
+      - name: Per FTPS veröffentlichen
+        env:
+          DEPLOY_ENABLED: ${{ vars.DEPLOY_ENABLED }}
+          FTP_HOST: ${{ secrets.FTP_HOST }}
+          FTP_USER: ${{ secrets.FTP_USER }}
+          FTP_PASSWORD: ${{ secrets.FTP_PASSWORD }}
+          FTP_PORT: ${{ vars.FTP_PORT }}
+          FTP_REMOTE_DIR: ${{ vars.FTP_REMOTE_DIR }}
+          # Gleicher Wert wie im Build-Job (dort Fallback auf die Staging-Adresse).
+          SITE_URL: ${{ vars.SITE_URL || 'https://hendrik.kreativdeck.dev' }}
+          DIST_DIR: ${{ runner.temp }}/website-dist
+        run: python3 -I deployment/ftps_deploy.py --source "$DIST_DIR" --deploy

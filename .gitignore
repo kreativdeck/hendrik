@@ -11,3 +11,5 @@ dist/
 
 # Lokale Referenz und Prüfartefakte der Migration
 .migration/
+__pycache__/
+*.pyc
