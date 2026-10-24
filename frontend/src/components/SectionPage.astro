@@ -2,6 +2,7 @@
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { sectionMeta } from '../lib/seo';
 import Hero from './Hero.astro';
+import DetailIntro from './DetailIntro.astro';
 import SiteImage from './SiteImage.astro';
 import Lightbox from './Lightbox.astro';
 import { galleryFor, type SectionData } from '../lib/sections';
@@ -16,7 +17,9 @@ const currentPage = section.single ? section.key : section.key + '/' + areaKey;
 ---
 <BaseLayout meta={sectionMeta(data, areaKey)} pageKey={pageKey} currentPage={currentPage}>
   <Hero image={area.cover} alt={data.descriptions[area.cover.split('/').at(-1)!]!} title={area.label} />
-  {paragraphs.length > 0 && (area.introTitle ? (
+  {paragraphs.length > 0 && (area.introEyebrow && area.introTitle ? (
+    <DetailIntro eyebrow={area.introEyebrow} title={area.introTitle} paragraphs={paragraphs} />
+  ) : area.introTitle ? (
     <section class="flex flex-col px-gutter pt-section-m" aria-labelledby="intro-heading">
       <div class="@container mx-auto w-full max-w-site">
         <div class="flex flex-col gap-l">

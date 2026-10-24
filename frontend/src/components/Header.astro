@@ -8,7 +8,7 @@ const { currentPage = '' } = Astro.props;
 ---
 <header class="group/header border-b border-black/20 bg-white px-gutter text-black transition-transform focus-within:translate-y-0 [&.is-ready]:sticky [&.is-ready]:top-0 [&.is-ready]:z-50 slid-up:-translate-y-full" data-header data-slide-up-after="300">
   <div class="mx-auto flex w-full max-w-site flex-col items-stretch">
-    <div class="grid items-center gap-s py-xs ready:grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] compact:grid-cols-[minmax(0,1fr)_auto] compact:gap-xs" data-header-grid>
+    <div class="grid items-center gap-s py-xs grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] pending:max-[1175px]:grid-cols-[minmax(0,1fr)_auto] compact:grid-cols-[minmax(0,1fr)_auto] compact:gap-xs" data-header-grid>
       <a class="block w-[calc(var(--spacing-xxl)*1.5)] max-w-full min-w-0" data-header-brand href="/" aria-label="Hendrik Lampe – Startseite" aria-current={currentPage === "home" ? "page" : undefined}>
         <Logo />
       </a>
@@ -92,7 +92,7 @@ const { currentPage = '' } = Astro.props;
           </li>
         </ul>
       </nav>
-      <a class="inline-flex w-max min-w-[8.75rem] cursor-pointer items-center justify-center rounded-base border-[1.5px] border-muted bg-white px-[1.25em] py-[0.8em] text-center text-m leading-none text-black aria-[current=page]:text-lion justify-self-start font-light ready:justify-self-end compact:hidden" data-header-contact href="/kontakt/" aria-current={currentPage === "kontakt" ? "page" : undefined}>Kontakt</a>
+      <a class="inline-flex w-max min-w-[8.75rem] cursor-pointer items-center justify-center rounded-base border-[1.5px] border-muted bg-white px-[1.25em] py-[0.8em] text-center text-m leading-none text-black aria-[current=page]:text-lion col-start-3 justify-self-end font-light pending:max-[1175px]:col-start-2 pending:max-[1175px]:min-w-0 pending:max-[1175px]:min-h-[calc(var(--spacing-m)+var(--spacing-xs)*2)] compact:hidden" data-header-contact href="/kontakt/" aria-current={currentPage === "kontakt" ? "page" : undefined}>Kontakt</a>
       <button class="group/nav-toggle hidden cursor-pointer compact:inline-flex compact:min-h-[calc(var(--spacing-m)+var(--spacing-xs)*2)] compact:min-w-[calc(var(--spacing-m)+var(--spacing-xs)*2)] compact:items-center compact:justify-end compact:justify-self-end compact:border-0 compact:p-xs compact:pe-0" data-nav-toggle type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
         <span class="relative block h-0.5 w-m bg-current transition-colors group-aria-expanded/nav-toggle:bg-transparent before:absolute before:inset-0 before:-translate-y-[calc(var(--spacing-xs)*0.5)] before:bg-current before:transition-transform before:content-[''] group-aria-expanded/nav-toggle:before:translate-y-0 group-aria-expanded/nav-toggle:before:rotate-45 after:absolute after:inset-0 after:translate-y-[calc(var(--spacing-xs)*0.5)] after:bg-current after:transition-transform after:content-[''] group-aria-expanded/nav-toggle:after:translate-y-0 group-aria-expanded/nav-toggle:after:-rotate-45 motion-reduce:transition-none motion-reduce:before:transition-none motion-reduce:after:transition-none" aria-hidden="true"></span>
       </button>

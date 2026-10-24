@@ -10,6 +10,9 @@
     "holzarten": {
       "tint": "bg-tint-1",
       "label": "Holzarten",
+      "introEyebrow": "Hendrik Lampe · Holzarten",
+      "introTitle": "Drei Hölzer. Drei Charaktere.",
+      "intro": "Douglasie, Eiche und Nussbaum unterscheiden sich in Farbe, Maserung und Ausstrahlung. Ein genauer Blick auf das Holz ist der Anfang jeder Gestaltung – und macht sichtbar, was dein Möbel später prägt.",
       "text": "Douglasie, Eiche und Nussbaum: drei Hölzer mit eigener Maserung.",
       "lead": "Die Holzarten Douglasie, Eiche und Nussbaum, jede mit eigener Maserung und Farbe.",
       "folder": "Materialen/Holzarten",
@@ -18,6 +21,9 @@
     "oberflaechen": {
       "tint": "bg-tint-4",
       "label": "Oberflächen",
+      "introEyebrow": "Hendrik Lampe · Oberflächen",
+      "introTitle": "Holz mit spürbarer Struktur.",
+      "intro": "Glatt geschliffen oder sandgestrahlt: Die Bearbeitung verändert, wie Holz aussieht und sich anfühlt. Entdecke die unterschiedlichen Oberflächen und die Details, die ihre Struktur sichtbar machen.",
       "text": "Glatt geschliffen oder sandgestrahlt: Oberflächen mit eigener Struktur.",
       "lead": "Oberflächen für Holz: glatt geschliffen oder sandgestrahlt.",
       "folder": "Materialen/Oberflächen",
@@ -26,6 +32,9 @@
     "messingkanten": {
       "tint": "bg-tint-6",
       "label": "Messingkanten",
+      "introEyebrow": "Hendrik Lampe · Messingkanten",
+      "introTitle": "Ein feiner Akzent mit klarer Kante.",
+      "intro": "Messing setzt einen bewussten Abschluss an Tischplatten und Brettern. Glänzend, matt oder matt gebürstet verändert die Metallkante den Ausdruck des Holzes und lenkt den Blick auf das Detail.",
       "text": "Kanten aus Messing: glänzend, matt oder matt gebürstet.",
       "lead": "Messingkanten für Tischplatten und Bretter: glänzend, matt oder matt gebürstet.",
       "folder": "Materialen/Messingkanten",
@@ -34,6 +43,9 @@
     "farben": {
       "tint": "bg-tint-2",
       "label": "Farben",
+      "introEyebrow": "Hendrik Lampe · Farben",
+      "introTitle": "Farbe gibt Holz eine neue Richtung.",
+      "intro": "Ein zurückhaltender Ton oder ein farbiger Akzent verändert die Wirkung eines Möbelstücks. Die Farbmuster zeigen, welche Möglichkeiten sich mit Holz verbinden lassen und wie daraus deine eigene Kombination entsteht.",
       "text": "Die Holzfarben in sanften Pastelltönen.",
       "lead": "Holzfarben in sanften Pastelltönen auf Eichenholz.",
       "folder": "Materialen/Farben",

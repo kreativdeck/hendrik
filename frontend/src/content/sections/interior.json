@@ -10,6 +10,9 @@
     "wohnen": {
       "tint": "bg-tint-1",
       "label": "Wohnen",
+      "introEyebrow": "Hendrik Lampe · Wohnen",
+      "introTitle": "Raum für das, was dir wichtig ist.",
+      "intro": "Ein Tisch für den Alltag, ein Regal voller Geschichten, ein Platz zum Ankommen. Möbel aus Holz geben deinem Wohnraum Struktur und lassen Raum für deinen eigenen Stil.",
       "text": "Tische, Kommoden und Wandschränke, die zu Deinem Wohnraum passen und mit den Jahren schöner werden.",
       "lead": "Möbel für den Raum, in dem das Leben stattfindet: Tische, Kommoden und Wandschränke aus Holz, passend zu Deinem Zuhause gebaut.",
       "folder": "Holzobjekte/Wohnen",
@@ -18,6 +21,9 @@
     "kochen": {
       "tint": "bg-tint-2",
       "label": "Kochen",
+      "introEyebrow": "Hendrik Lampe · Kochen",
+      "introTitle": "Hier beginnt der gute Alltag.",
+      "intro": "Vom ersten Kaffee bis zum gemeinsamen Kochen am Abend: Eine Küche muss zu den Menschen passen, die sie nutzen. Holz, durchdachter Stauraum und klare Formen bringen Ruhe in den täglichen Ablauf.",
       "text": "Küchen aus Holz, gebaut für den Alltag: robuste Arbeitsplatten, klare Linien und viel Stauraum.",
       "lead": "Das Herz des Hauses verdient Holz: Einbauküchen, Küchenblöcke und Arbeitsplatten, gebaut für den täglichen Gebrauch.",
       "folder": "Holzobjekte/Kochen",
@@ -26,6 +32,9 @@
     "essen": {
       "tint": "bg-tint-3",
       "label": "Essen",
+      "introEyebrow": "Hendrik Lampe · Essen",
+      "introTitle": "Ein Tisch. Viele gemeinsame Momente.",
+      "intro": "Für ein schnelles Frühstück, ein langes Abendessen oder Besuch, der noch bleibt. Tische und Bänke aus Holz schaffen einen gemeinsamen Mittelpunkt – abgestimmt auf deinen Raum und die Menschen an deinem Tisch.",
       "text": "Der Tisch, an dem alle zusammenkommen. Vom rustikalen Massivholz bis zum schwarzen Design.",
       "lead": "Gemeinsam essen, lange sitzen, wiederkommen: Esstische, Tischbänke und Eckbänke aus Holz, individuell für Deinen Raum gefertigt.",
       "folder": "Holzobjekte/Essen",
@@ -34,6 +43,9 @@
     "schlafen": {
       "tint": "bg-tint-4",
       "label": "Schlafen",
+      "introEyebrow": "Hendrik Lampe · Schlafen",
+      "introTitle": "Ein ruhiger Ort für jeden Abend.",
+      "intro": "Im Schlafzimmer darf der Alltag leiser werden. Klare Formen und die natürliche Ausstrahlung von Holz prägen Betten und Einrichtungen, die Raum zum Ausruhen und Ankommen lassen.",
       "text": "Betten für ruhige Nächte und Kinderzimmer, in denen man sich geborgen fühlt.",
       "lead": "Ruhige Betten und Kinderzimmer aus Holz: vom schlichten Holzbett bis zum Hochbett mit gepolsterter Rückwand.",
       "folder": "Holzobjekte/Schlafen",
@@ -42,6 +54,9 @@
     "baden": {
       "tint": "bg-tint-5",
       "label": "Baden",
+      "introEyebrow": "Hendrik Lampe · Baden",
+      "introTitle": "Holz bringt Wärme ins Bad.",
+      "intro": "Eine Ablage für die kleinen Dinge, ein Waschtisch mit Platz darunter, ein Schrank, der sich einfügt. Individuelle Holzmöbel verbinden Stauraum mit einer ruhigen Gestaltung und machen das Bad zu deinem eigenen Raum.",
       "text": "Waschtische und Unterschränke, die Holz und Wasser sinnvoll zusammenbringen.",
       "lead": "Waschtische, Unterschränke und Ablagen, die zu Deinem Bad passen und Holz in den Raum bringen.",
       "folder": "Holzobjekte/Baden",
@@ -50,6 +65,9 @@
     "arbeiten": {
       "tint": "bg-tint-6",
       "label": "Arbeiten",
+      "introEyebrow": "Hendrik Lampe · Arbeiten",
+      "introTitle": "Platz für Ideen. Ordnung für den Alltag.",
+      "intro": "Gute Arbeit braucht einen Platz, der mitdenkt. Schreibtische, Regale und Besprechungstische aus Holz bringen Arbeitsflächen und Stauraum zusammen – vom einzelnen Arbeitsplatz bis zum gemeinsam genutzten Büro.",
       "text": "Schreibtische, Regale und Meetingtische für Büros, in denen man gern arbeitet.",
       "lead": "Arbeitsplätze mit Charakter: Schreibtische, Regale, Garderoben und Meetingtische für Büro und Arbeitsplatz.",
       "folder": "Holzobjekte/Arbeiten",
@@ -58,6 +76,9 @@
     "holzobjekte": {
       "tint": "bg-tint-3",
       "label": "Holzobjekte",
+      "introEyebrow": "Hendrik Lampe · Holzobjekte",
+      "introTitle": "Die kleinen Dinge machen den Raum.",
+      "intro": "Eine Bank am richtigen Platz, ein Regal für Lieblingsstücke oder eine Verkleidung, die sich einfügt. Holzobjekte ergänzen deine Einrichtung dort, wo aus einer guten Idee ein persönliches Detail wird.",
       "text": "Bänke, Regale, Verkleidungen und Wohnaccessoires aus Holz – individuell für Deinen Alltag gefertigt.",
       "lead": "Individuelle Holzobjekte und Wohnaccessoires: von Bänken und Regalen bis zu Verkleidungen und kleinen Details.",
       "folder": "Holzobjekte/Holzobjekte",

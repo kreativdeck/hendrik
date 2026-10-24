@@ -128,6 +128,8 @@
 @layer base {
   html {
     font-size: 100%;
+    /* Klassische Scrollbars sollen den Header nicht je nach Seitenlänge verschieben. */
+    scrollbar-gutter: stable;
   }
 
   body {

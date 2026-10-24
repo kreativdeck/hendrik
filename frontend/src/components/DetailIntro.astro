@@ -1,0 +1,11 @@
+---
+interface Props { eyebrow: string; title: string; paragraphs: string[] }
+const { eyebrow, title, paragraphs } = Astro.props;
+---
+<section class="flex flex-col gap-xl px-gutter py-section-m" aria-labelledby="intro-heading">
+  <div class="mx-auto flex w-full max-w-site flex-col items-center gap-m text-center">
+    <p class="text-s">{eyebrow}</p>
+    <h2 id="intro-heading">{title}</h2>
+    {paragraphs.map((paragraph) => <p class="max-w-[calc(var(--container-site)/2)] text-l">{paragraph}</p>)}
+  </div>
+</section>

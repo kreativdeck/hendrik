@@ -8,6 +8,8 @@ export interface Category {
   overviewCover?: string;
   text?: string;
   tint?: string;
+  /** Opt-in für das zentrierte Detail-Intro (Eyebrow, H2, Absatz); ohne Eyebrow bleibt die klassische Darstellung. */
+  introEyebrow?: string;
   introTitle?: string;
   intro?: string | string[];
   masonry?: boolean;
