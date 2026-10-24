@@ -86,6 +86,8 @@ npm run test:browser
 
 Die Prüfung verwendet installiertes Google Chrome unter macOS. Ein anderer Chromium-Pfad ist über `CHROME_PATH` möglich; die Website-Adresse über `SITE_TEST_URL`. Ergebnisse und Screenshots liegen ausschließlich in `.migration/qa/`, außerhalb der Veröffentlichung und von Git ausgeschlossen.
 
+`npm run test:header` prüft Header-Positionen pro Frame auf Desktop und Mobilgeräten, beim ersten Laden, mit langsamen/fehlenden Schriften und bei echten Seitenwechseln einschließlich Zurück/Vorwärts. `npm run test:image-fallback` prüft den einmaligen Rückfall responsiver Bilder auf ihr Original-JPEG bei Ladefehlern. Beide verwenden den fertigen Build; `test:header` nutzt wie `test:browser` die laufende Vorschau.
+
 `npm run test:visual` prüft alle 34 Seiten bei 1440/768/390/320 Pixeln auf überlaufende Inhalte, defekte Bilder und JavaScript-Fehler. Screenshots der geänderten Seiten und die Ergebnisse liegen unter `.migration/qa/current/`. Ein pixelgleicher Vergleich mit der alten Website ist nach den beauftragten Gestaltungsänderungen nicht mehr das Abnahmekriterium. Die ursprünglichen Vergleichsergebnisse bleiben als Migrationsartefakte erhalten.
 
 ## Kontakt-API

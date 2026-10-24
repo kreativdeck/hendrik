@@ -13,7 +13,7 @@ try {
   await ready('/');
   await expect(page.locator('[data-header]')).not.toHaveClass(/is-compact/);
   const icons = page.locator('[data-submenu-toggle] svg');
-  await expect(icons).toHaveCount(2);
+  await expect(icons).toHaveCount(3);
   for (const icon of await icons.all()) await expect(icon).toHaveCSS('filter','grayscale(1)');
   await expect(page.locator('[data-header-contact]')).toHaveCSS('background-color','rgb(255, 255, 255)');
   const borderMatchesBody = await page.evaluate(() => getComputedStyle(document.querySelector('[data-header-contact]')).borderColor === getComputedStyle(document.body).color);
@@ -50,7 +50,7 @@ try {
   await expect(page.locator('[data-site-nav] a[href="/interior/wohnen/"]')).toHaveCSS('color','rgb(210, 52, 58)');
   await expect(page.locator('[data-submenu-toggle][aria-controls="submenu-0"]')).toHaveCSS('color','rgb(210, 52, 58)');
   await expect(page.locator('#submenu-0 a').last()).toHaveText('Holzobjekte');
-  await expect(page.locator('[data-submenu-toggle]')).toHaveText(['Interior','Formcultur','Landoak','Materials','About']);
+  await expect(page.locator('[data-submenu-toggle]')).toHaveText(['Interior','FORMCULTUR','Landoak','Materials','About']);
   checked.push('Mobil: alle Dropdowns, Scrollsperre, Fokuskreislauf, Escape, Navigation und aktive URL');
   await page.locator('[data-nav-toggle]').click();await page.setViewportSize({width:1920,height:1000});
   await expect(page.locator('body')).not.toHaveClass(/has-open-navigation/);
@@ -104,7 +104,8 @@ try {
     const h1=hero.locator('h1#hero-heading');
     await expect(h1).toHaveClass(/sr-only/);
     const box=await h1.boundingBox();expect(box.width<=1&&box.height<=1).toBe(true);
-    const heroText=await hero.evaluate(el=>el.textContent.trim());
+    // Inline-Skripte sind kein sichtbarer Hero-Text.
+    const heroText=await hero.evaluate(el=>{const copy=el.cloneNode(true);copy.querySelectorAll('script,style').forEach(node=>node.remove());return copy.textContent.trim();});
     expect(heroText).toBe((await h1.textContent()).trim());
     expect(await hero.locator('p').count()).toBe(0);
     checked.push('Hero ohne sichtbaren Text, H1 sr-only: '+key);

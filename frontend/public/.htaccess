@@ -15,13 +15,16 @@ DirectoryIndex index.html
   RewriteRule ^formkultur/([^/.]+)(?:/index\.html)?/?$ /formcultur/$1/ [R=301,L]
   RewriteRule ^materialen(?:/index\.html)?/?$ /materials/ [R=301,L]
   RewriteRule ^materialen/([^/.]+)(?:/index\.html)?/?$ /materials/$1/ [R=301,L]
-
-  RewriteCond %{REQUEST_FILENAME} !-f
-  RewriteCond %{REQUEST_FILENAME} !-d
-  RewriteRule ^ 404.html [L]
 </IfModule>
 
+# Unbekannte Adressen und fehlende Dateien: Apache liefert 404.html mit echtem
+# Status 404 aus (kein interner Rewrite, der als Soft-404 mit HTTP 200 endet).
 ErrorDocument 404 /404.html
+
+# AVIF eindeutig mit MIME-Typ ausliefern (sonst fehlt Content-Type, vgl. nosniff).
+<IfModule mod_mime.c>
+  AddType image/avif .avif
+</IfModule>
 
 <IfModule mod_headers.c>
   Header set X-Content-Type-Options "nosniff"

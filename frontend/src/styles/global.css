@@ -7,12 +7,15 @@
 /* Fonts
    ========================================================================== */
 
+/* Die Schrift 300 steckt als Data-URI im Stylesheet: Sie trägt die Navigation und den Fließtext und
+   kommt damit zusammen mit dem Stylesheet (30 Tage Cache) statt als eigene, ungecachte Anfrage.
+   `block` zeigt bis zu ihrer Verfügbarkeit (wenige ms) keinen Ersatzschrift-Text. */
 @font-face {
   font-family: "Exo 2";
-  src: url("/assets/fonts/exo-2-v26-latin-300.woff2") format("woff2");
+  src: url("../../public/assets/fonts/exo-2-v26-latin-300.woff2?inline") format("woff2");
   font-weight: 300;
   font-style: normal;
-  font-display: swap;
+  font-display: block;
 }
 
 @font-face {
@@ -115,7 +118,13 @@
    ========================================================================== */
 
 @custom-variant ready (&:where(.is-ready, .is-ready *));
-@custom-variant compact (&:where(.is-compact, .is-compact *));
+/* Eine gemeinsame Container-Grenze für den ersten HTML-Frame und das fertige Menü.
+   68rem geben der Navigation einschließlich FORMCULTUR-Logo und beiden Seitenspalten
+   Platz. JavaScript liest --header-compact, statt mit einer anderen Schriftbreite
+   eine zweite Umschaltentscheidung zu treffen. */
+@custom-variant compact {
+  @container site-header (max-width: 68rem) { @slot; }
+}
 @custom-variant nav-open (&:where(.is-open, .is-open *));
 @custom-variant slid-up (&:where(.is-hidden));
 @custom-variant animated (&:where(.is-animated, .is-animated *));
@@ -206,6 +215,16 @@
    ========================================================================== */
 
 @layer components {
+  [data-header-grid] { --header-compact: 0; }
+
+  @container site-header (max-width: 68rem) {
+    [data-header-grid] { --header-compact: 1; }
+  }
+
+  /* Bleibt die Schrift ausnahmsweise unlesbar, bleibt das Menü bedienbar und
+     wechselt auch bei einer späteren Font-Antwort nicht erneut seine Metrik. */
+  [data-header].is-font-fallback { font-family: Arial, sans-serif; }
+
   [data-submenu-toggle] svg,
   [data-nav-icon] {
     filter: grayscale(1);

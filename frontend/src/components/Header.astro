@@ -3,12 +3,14 @@ import Logo from './Logo.astro';
 import lion from '../../public/assets/icons/lion.svg?raw';
 import donkey from '../../public/assets/icons/donkey.svg?raw';
 import twoStripesOak from '../../public/assets/icons/two-stripes-oak-logo.svg?raw';
+import formkulturSvg from '../../public/assets/icons/formkultur-logo.svg?raw';
+const formkultur = formkulturSvg.replace(/<\?xml[^>]*\?>/, '').replace(/<title>.*?<\/title>/s, '');
 interface Props { currentPage?: string }
 const { currentPage = '' } = Astro.props;
 ---
-<header class="group/header border-b border-black/20 bg-white px-gutter text-black transition-transform focus-within:translate-y-0 [&.is-ready]:sticky [&.is-ready]:top-0 [&.is-ready]:z-50 slid-up:-translate-y-full" data-header data-slide-up-after="300">
+<header class="@container/site-header group/header border-b border-black/20 bg-white px-gutter text-black transition-transform focus-within:translate-y-0 [&.is-ready]:sticky [&.is-ready]:top-0 [&.is-ready]:z-50 slid-up:-translate-y-full" data-header data-slide-up-after="300">
   <div class="mx-auto flex w-full max-w-site flex-col items-stretch">
-    <div class="grid items-center gap-s py-xs grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] pending:max-[1175px]:grid-cols-[minmax(0,1fr)_auto] compact:grid-cols-[minmax(0,1fr)_auto] compact:gap-xs" data-header-grid>
+    <div class="grid items-center gap-s py-xs grid-cols-[minmax(0,1fr)_auto_minmax(0,1fr)] compact:grid-cols-[minmax(0,1fr)_auto] compact:gap-xs" data-header-grid>
       <a class="block w-[calc(var(--spacing-xxl)*1.5)] max-w-full min-w-0" data-header-brand href="/" aria-label="Hendrik Lampe – Startseite" aria-current={currentPage === "home" ? "page" : undefined}>
         <Logo />
       </a>
@@ -34,7 +36,13 @@ const { currentPage = '' } = Astro.props;
                       </li>
                     <li class="relative flex flex-col text-m font-light ready:flex-row ready:items-center compact:flex-col compact:items-stretch">
                         <button class="group/toggle inline-flex cursor-pointer items-center gap-xs compact:flex compact:w-full compact:justify-between compact:py-xs" data-submenu-toggle type="button" aria-expanded="false" aria-controls="submenu-1" data-active={currentPage === "formcultur" || currentPage.startsWith("formcultur/") ? "true" : undefined}>
-                            Formcultur                            <span class="size-[0.5em] -translate-y-1/4 rotate-45 border-e-2 border-b-2 border-current group-aria-expanded/toggle:translate-y-1/4 group-aria-expanded/toggle:rotate-[225deg]" aria-hidden="true"></span>
+                            <span class="inline-flex items-center gap-[calc(var(--spacing-xs)*0.5)]">
+                <span class="block size-[1.25em] shrink-0 [&>svg]:block [&>svg]:size-full" aria-hidden="true">
+                  <Fragment set:html={formkultur} />
+                </span>
+                FORMCULTUR
+              </span>
+                            <span class="size-[0.5em] -translate-y-1/4 rotate-45 border-e-2 border-b-2 border-current group-aria-expanded/toggle:translate-y-1/4 group-aria-expanded/toggle:rotate-[225deg]" aria-hidden="true"></span>
             </button>
             <ul class="flex flex-col flex-nowrap bg-white py-xs font-light ready:absolute ready:start-0 ready:top-full ready:w-max ready:min-w-full ready:border ready:border-black/20 ready:transition-[opacity,translate] ready:starting:-translate-y-[calc(var(--spacing-xs)*0.5)] ready:starting:opacity-0 compact:static compact:w-full compact:border-0 compact:py-0 motion-reduce:transition-none" id="submenu-1">
                             <li><a class="block px-s py-xs underline-offset-2 hover:underline aria-[current=page]:underline" href="/formcultur/" aria-current={currentPage === "formcultur" ? "page" : undefined}>Übersicht</a></li>
@@ -92,7 +100,7 @@ const { currentPage = '' } = Astro.props;
           </li>
         </ul>
       </nav>
-      <a class="inline-flex w-max min-w-[8.75rem] cursor-pointer items-center justify-center rounded-base border-[1.5px] border-muted bg-white px-[1.25em] py-[0.8em] text-center text-m leading-none text-black aria-[current=page]:text-lion col-start-3 justify-self-end font-light pending:max-[1175px]:col-start-2 pending:max-[1175px]:min-w-0 pending:max-[1175px]:min-h-[calc(var(--spacing-m)+var(--spacing-xs)*2)] compact:hidden" data-header-contact href="/kontakt/" aria-current={currentPage === "kontakt" ? "page" : undefined}>Kontakt</a>
+      <a class="inline-flex w-max min-w-[8.75rem] cursor-pointer items-center justify-center rounded-base border-[1.5px] border-muted bg-white px-[1.25em] py-[0.8em] text-center text-m leading-none text-black aria-[current=page]:text-lion col-start-3 justify-self-end font-light compact:hidden" data-header-contact href="/kontakt/" aria-current={currentPage === "kontakt" ? "page" : undefined}>Kontakt</a>
       <button class="group/nav-toggle hidden cursor-pointer compact:inline-flex compact:min-h-[calc(var(--spacing-m)+var(--spacing-xs)*2)] compact:min-w-[calc(var(--spacing-m)+var(--spacing-xs)*2)] compact:items-center compact:justify-end compact:justify-self-end compact:border-0 compact:p-xs compact:pe-0" data-nav-toggle type="button" aria-expanded="false" aria-controls="site-nav" aria-label="Menü öffnen">
         <span class="relative block h-0.5 w-m bg-current transition-colors group-aria-expanded/nav-toggle:bg-transparent before:absolute before:inset-0 before:-translate-y-[calc(var(--spacing-xs)*0.5)] before:bg-current before:transition-transform before:content-[''] group-aria-expanded/nav-toggle:before:translate-y-0 group-aria-expanded/nav-toggle:before:rotate-45 after:absolute after:inset-0 after:translate-y-[calc(var(--spacing-xs)*0.5)] after:bg-current after:transition-transform after:content-[''] group-aria-expanded/nav-toggle:after:translate-y-0 group-aria-expanded/nav-toggle:after:-rotate-45 motion-reduce:transition-none motion-reduce:before:transition-none motion-reduce:after:transition-none" aria-hidden="true"></span>
       </button>

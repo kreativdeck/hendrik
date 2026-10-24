@@ -25,3 +25,7 @@ const webp = srcset('webp');
     <img src={image.url} alt={alt} width={image.width ?? undefined} height={image.height ?? undefined} class={className} loading={loading} />
   </picture>
 ) : <img src={image.url} alt={alt} width={image.width ?? undefined} height={image.height ?? undefined} class={className} loading={loading} />}
+
+<script>
+  import '../scripts/image-fallback.js';
+</script>

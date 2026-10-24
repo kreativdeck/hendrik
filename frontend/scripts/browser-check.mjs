@@ -28,7 +28,12 @@ try {
         overflow:document.documentElement.scrollWidth > innerWidth + 1,
         broken:[...document.images].filter(im=>im.getAttribute('src') && (!im.complete || !im.naturalWidth)).map(im=>im.src),
         compact:document.querySelector('[data-header]').classList.contains('is-compact'),
-        heroTextVisible:(h=>h?[...h.querySelectorAll('p,h2,h3,a,button')].length>0||h.textContent.trim()!==h.querySelector('h1').textContent.trim()||h.querySelector('h1').getBoundingClientRect().width>1:false)(document.querySelector('section[aria-labelledby="hero-heading"]')),
+        heroTextVisible:(h=>{
+          if(!h)return false;
+          // Skript-/Stylesheet-Inhalt wird nicht als Text gerendert.
+          const copy=h.cloneNode(true);copy.querySelectorAll('script,style').forEach(node=>node.remove());
+          return [...h.querySelectorAll('p,h2,h3,a,button')].length>0||copy.textContent.trim()!==h.querySelector('h1').textContent.trim()||h.querySelector('h1').getBoundingClientRect().width>1;
+        })(document.querySelector('section[aria-labelledby="hero-heading"]')),
         heroHeight:Math.round(document.querySelector('section[aria-labelledby="hero-heading"]')?.getBoundingClientRect().height ?? 0),
       }));
       if (metrics.overflow || metrics.broken.length || metrics.heroTextVisible) errors.push({key,width,...metrics});

@@ -10,7 +10,6 @@ if (header && nav && toggle) {
   const grid = header.querySelector("[data-header-grid]");
   const brand = header.querySelector("[data-header-brand]");
   const contact = header.querySelector("[data-header-contact]");
-  const list = header.querySelector("[data-header-list]");
   const groups = [...header.querySelectorAll("[data-submenu-toggle]")].map((button) => ({
     button,
     submenu: document.getElementById(button.getAttribute("aria-controls")),
@@ -129,8 +128,8 @@ if (header && nav && toggle) {
     }
   });
 
-  // Measure the actual desktop content, including symmetrical outer columns.
-  // Removing the compact state for this synchronous read never paints it.
+  // CSS entscheidet bereits im ersten Frame über Desktop/Burger. Dieselbe
+  // Entscheidung steuert hier Bedienung, Fokus und Scrollsperre.
   const fitNavigation = () => {
     fitFrame = 0;
     const activeElement = document.activeElement;
@@ -138,18 +137,10 @@ if (header && nav && toggle) {
     const toggleHadFocus = activeElement === toggle;
     const contactHadFocus = activeElement === contact;
     const mobileContactHadFocus = activeElement.matches("[data-mobile-contact]");
-    // Übergänge während der Messung aus, sonst fährt das Menü bei jeder Messung kurz ein und aus.
-    const wasAnimated = header.classList.contains("is-animated");
-    header.classList.remove("is-animated", "is-compact");
-    const gap = parseFloat(getComputedStyle(grid).columnGap) || 0;
-    const sideWidth = Math.max(brand.getBoundingClientRect().width, contact.getBoundingClientRect().width);
-    const needed = list.getBoundingClientRect().width + sideWidth * 2 + gap * 2;
-    const nextCompact = needed > grid.getBoundingClientRect().width;
+    const nextCompact = getComputedStyle(grid).getPropertyValue("--header-compact").trim() === "1";
     const modeChanged = nextCompact !== compact;
     compact = nextCompact;
     header.classList.toggle("is-compact", compact);
-    nav.getBoundingClientRect();
-    if (wasAnimated) header.classList.add("is-animated");
     nav.inert = compact && !panelOpen;
     const shouldClose = modeChanged || closeOnFit;
     closeOnFit = false;
@@ -173,17 +164,37 @@ if (header && nav && toggle) {
     if (!fitFrame) fitFrame = requestAnimationFrame(fitNavigation);
   };
 
-  header.classList.add("is-ready");
-  fitNavigation();
-  // Übergänge erst nach der ersten Messung, damit das Menü beim Laden nicht einfährt.
-  requestAnimationFrame(() => requestAnimationFrame(() => header.classList.add("is-animated")));
-  const resizeObserver = new ResizeObserver(queueFit);
-  [grid, brand, contact, list].forEach((element) => resizeObserver.observe(element));
-  window.addEventListener("resize", () => {
-    closeOnFit = true;
-    queueFit();
-  }, { passive: true });
-  document.fonts.ready.then(queueFit);
+  // Die Desktop-Navigation erscheint erst, wenn ihre Schrift (Exo 2, 300) bereitsteht:
+  // Mit der Ersatzschrift wären sie einige Pixel anders breit, sprängen beim Nachladen seitlich und
+  // ihre Position wäre beim ersten Laden instabil. Die Schrift steckt im
+  // Stylesheet und ist meist schon beim ersten Skriptlauf da; bis dahin zeigt der Header den
+  // CSS-Zustand vor dem Skript (gleiche Grenze, siehe global.css).
+  const start = () => {
+    header.classList.add("is-ready");
+    fitNavigation();
+    // Übergänge erst nach der ersten Messung, damit das Menü beim Laden nicht einfährt.
+    requestAnimationFrame(() => requestAnimationFrame(() => header.classList.add("is-animated")));
+    const resizeObserver = new ResizeObserver(queueFit);
+    resizeObserver.observe(grid);
+    window.addEventListener("resize", () => {
+      closeOnFit = true;
+      queueFit();
+    }, { passive: true });
+    document.fonts?.ready.then(queueFit);
+  };
+  const navFont = '300 1em "Exo 2"';
+  if (!document.fonts || document.fonts.check(navFont)) {
+    start();
+  } else {
+    // Nach spätestens 1,5 s dauerhaft Ersatzschrift für diesen Header verwenden:
+    // So bleibt er bedienbar, ohne bei einer verspäteten Schrift doch noch zu springen.
+    Promise.race([document.fonts.load(navFont), new Promise((resolve) => setTimeout(resolve, 1500))])
+      .catch(() => {})
+      .then(() => {
+        if (!document.fonts.check(navFont)) header.classList.add("is-font-fallback");
+        start();
+      });
+  }
 
   window.addEventListener("scroll", () => {
     if (scrollFrame) return;
