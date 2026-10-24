@@ -2,6 +2,25 @@
 
 Originalgetreue Migration der vorhandenen PHP-/Tailwind-Website nach Astro 7, Tailwind CSS 4 und TypeScript. Die Anwendung liegt in `frontend/` und baut statische Seiten. Der alte Projektordner wird zum Entwickeln und Bauen nicht benötigt.
 
+## Website aktualisieren und veröffentlichen
+
+Änderung am Projekt speichern und im Projektwurzelordner (ein Aufruf in `frontend/` funktioniert ebenfalls und übernimmt dann die Änderungen in diesem Ordner) an GitHub senden:
+
+```sh
+git add .
+git commit -m "Website aktualisiert"
+git push origin main
+```
+
+Alles Weitere übernimmt GitHub automatisch: Prüfung (`check`), Build, Parity-Test und danach die Veröffentlichung auf **https://hendrik.kreativdeck.dev**. Ein lokaler `npm run build` ist optional (nur zum Ansehen oder Gegenprüfen). `dist/` wird nicht committet, ein manueller FTP-Upload ist nicht nötig: FTPS dient nur als Hintergrund-Transport von GitHub zum Hosting, ein FTP-Programm muss nicht bedient werden.
+
+- **Ergebnis ansehen:** unter [Actions](https://github.com/kreativdeck/hendrik/actions) den Lauf zum Commit öffnen. Veröffentlicht ist die Änderung, wenn dort die Jobs „Check, Build, Parity“ und „Deploy (FTPS)“ grün sind.
+- **Fehler:** Schlägt Check, Build oder Parity fehl, läuft der Deploy gar nicht an und die Live-Website bleibt unverändert. Fehler stehen im Protokoll des Laufs; nach der Korrektur erneut committen und pushen.
+- **Deploy „skipped“:** Der Deploy-Job läuft nur, wenn die Repository-Variable `DEPLOY_ENABLED` exakt `true` ist. Ist sie nicht gesetzt, wird er übersprungen und es wird nichts veröffentlicht; Check, Build und Parity laufen trotzdem.
+- **Auf dem Server:** Gleichnamige Dateien des Builds werden aktualisiert, Dateien, die nur auf dem Server liegen, bleiben erhalten. Es wird nichts gelöscht.
+
+Technische Einzelheiten stehen unten im Abschnitt [GitHub-Workflow](#github-workflow) und in [deployment/README.md](deployment/README.md).
+
 ## Lokal starten
 
 Node.js 24 und npm verwenden. Nach einem frischen Checkout:
@@ -71,23 +90,23 @@ Die Prüfung verwendet installiertes Google Chrome unter macOS. Ein anderer Chro
 
 ## Kontakt-API
 
-Die bisherige `api/contact.php` ist bytegleich in `public/api/contact.php` erhalten. Die Quellwebsite enthält aktuell kein Kontaktformular; Kontakt erfolgt über Telefon- und E-Mail-Links. Nur die separat vorhandene API braucht beim späteren Hosting PHP mit Mailkonfiguration. Astro dev/preview führen diese Datei nicht aus. Sie darf nur auf einem Host mit PHP-Ausführung betrieben werden.
+Die bisherige `api/contact.php` ist bytegleich in `public/api/contact.php` erhalten. Die Quellwebsite enthält aktuell kein Kontaktformular; Kontakt erfolgt über Telefon- und E-Mail-Links. Nur die separat vorhandene API braucht auf dem Hosting PHP mit Mailkonfiguration. Astro dev/preview führen diese Datei nicht aus. Sie darf nur auf einem Host mit PHP-Ausführung betrieben werden.
 
 Die API-Prüfung benötigt einen lokal gestarteten PHP-Server für `frontend/dist` unter Port 4322 und läuft mit `npm run test:api`. `CONTACT_TEST_URL` kann die Adresse überschreiben. Geprüft werden ausschließlich Validierung und Honeypot, ohne Nachrichten zu versenden.
 
 ## GitHub-Workflow
 
-`.github/workflows/ci.yml` läuft bei Pushes auf `main`, bei Pull Requests und manuell (`workflow_dispatch`) auf `ubuntu-latest` mit Node.js aus `.nvmrc` (24). Er führt im Ordner `frontend/` nacheinander `npm ci`, `npm run check`, `npm run build` und `npm run test:parity` aus. Erst nach erfolgreicher Prüfung wird `frontend/dist` samt `.htaccess` als Artifact `website-dist-<commit>` bereitgestellt (14 Tage Aufbewahrung); vorher prüft ein Schritt, dass `dist` keine `._*`-, `.DS_Store`- oder `.env`-Dateien enthält. Zusätzlich laufen die Tests des Deployment-Skripts (`python3 -m unittest discover -s deployment`). Der Workflow hat nur Leserechte (`contents: read`), die Actions sind auf geprüfte Commit-SHAs gepinnt (Versionen als Kommentar). Secrets verwendet ausschließlich der optionale Job `deploy` (siehe unten); der Build-Job benötigt keine.
+`.github/workflows/ci.yml` läuft bei Pushes auf `main`, bei Pull Requests und manuell (`workflow_dispatch`) auf `ubuntu-latest` mit Node.js aus `.nvmrc` (24). Er führt im Ordner `frontend/` nacheinander `npm ci`, `npm run check`, `npm run build` und `npm run test:parity` aus. Erst nach erfolgreicher Prüfung wird `frontend/dist` samt `.htaccess` als Artifact `website-dist-<commit>` bereitgestellt (14 Tage Aufbewahrung); vorher prüft ein Schritt, dass `dist` keine `._*`-, `.DS_Store`- oder `.env`-Dateien enthält. Zusätzlich laufen die Tests des Deployment-Skripts (`python3 -m unittest discover -s deployment`). Der Workflow hat nur Leserechte (`contents: read`), die Actions sind auf geprüfte Commit-SHAs gepinnt (Versionen als Kommentar). Secrets verwendet ausschließlich der Job `deploy` (siehe unten); der Build-Job benötigt keine.
 
 `SITE_URL` stammt aus der Repository-Variable `SITE_URL` (GitHub: Settings → Secrets and variables → Actions → Variables). Ohne Variable gilt `https://hendrik.kreativdeck.dev`. Build und Parity-Prüfung verwenden denselben Wert. Die Browser-, Sichtprüfungs- und API-Skripte (`test:browser`, `test:visual`, `test:api`) setzen macOS-Chrome bzw. einen PHP-Server voraus und gehören nicht zur CI.
 
 Beim Aktualisieren der Actions jeweils Release prüfen, den Commit-SHA des Tags über die GitHub-API ermitteln und SHA samt Versionskommentar gemeinsam ändern.
 
-### Hosting und Deployment (FTPS, noch nicht aktiv)
+### Hosting und Deployment (FTPS)
 
 Das Hosting ist der bestätigte FTPS-Server (Zielordner `/hendrik.kreativdeck.dev`, Adresse `https://hendrik.kreativdeck.dev`), nicht ALL-INKL und nicht das JMC-Ziel. Die Website braucht weiterhin Apache mit `mod_rewrite` für `.htaccess` und PHP für `api/contact.php`; GitHub Pages ist deshalb nicht vorgesehen.
 
-Der Workflow enthält den Job `deploy` (Python-Standardbibliothek, keine Fremd-Deploy-Action). Er ist **inaktiv**, solange die Repository-Variable `DEPLOY_ENABLED` nicht exakt `true` ist, und läuft nie für Pull Requests, nur für `push`/`workflow_dispatch` auf `main` nach erfolgreichem Job `build`. Er lädt das geprüfte Artifact `website-dist-<commit>` desselben Laufs und überträgt es per FTPS. Dabei wird nichts auf dem Server gelöscht: Gleichnamige Builddateien werden ersetzt, zusätzliche Serverdateien bleiben unverändert. Vor dem ersten Dateiupdate bestätigt eine Zufallsprobe den Webroot. Details, Modi (`--offline`, Plan, `--deploy`), Konfiguration und Grenzen: [deployment/README.md](deployment/README.md).
+Der Workflow enthält den Job `deploy` (Python-Standardbibliothek, keine Fremd-Deploy-Action). Er ist **aktiv**, sobald die Repository-Variable `DEPLOY_ENABLED` exakt `true` ist; andernfalls wird er übersprungen („skipped“). Er läuft nie für Pull Requests, nur für `push`/`workflow_dispatch` auf `main` nach erfolgreichem Job `build`; schlägt `build` fehl, wird nichts veröffentlicht. Er lädt das geprüfte Artifact `website-dist-<commit>` desselben Laufs und überträgt es per FTPS. Dabei wird nichts auf dem Server gelöscht: Gleichnamige Builddateien werden ersetzt, zusätzliche Serverdateien bleiben unverändert. Vor dem ersten Dateiupdate bestätigt eine Zufallsprobe den Webroot. Details, Modi (`--offline`, Plan, `--deploy`), Konfiguration und Grenzen: [deployment/README.md](deployment/README.md).
 
 Lokal ohne Server prüfen (keine Verbindung, keine Schreibvorgänge) und planen (nur lesend, benötigt Zugangsdaten als Umgebungsvariablen):
 
@@ -98,6 +117,8 @@ python3 deployment/ftps_deploy.py --source frontend/dist
 
 Die lokale, von Git ignorierte `.env.ftp` enthält Zugangsdaten: nicht committen, nicht ausgeben und nicht per `source` in die Shell laden.
 
-Einzurichten sind später auf GitHub die Secrets `FTP_HOST`, `FTP_USER`, `FTP_PASSWORD` sowie die Variablen `FTP_PORT`, `FTP_REMOTE_DIR`, `SITE_URL`. `DEPLOY_ENABLED` bleibt `false`, bis die Aktualisierung gleichnamiger Dateien auf dem Server bestätigt ist. Stand: Die CI lief lokal grün, der erste Lauf auf GitHub steht noch aus; bis zur Aktivierung bleibt der Upload von `dist` manuell.
+Benötigt werden auf GitHub (Settings → Secrets and variables → Actions) die Secrets `FTP_HOST`, `FTP_USER`, `FTP_PASSWORD` sowie die Variablen `FTP_PORT`, `FTP_REMOTE_DIR`, `SITE_URL` und `DEPLOY_ENABLED=true`. Fehlt eine Angabe, bricht der Deploy-Schritt vor dem Verbindungsaufbau mit einer Fehlermeldung ab; die Live-Website bleibt dann unverändert.
 
-Offene Quelllücken, bewusste Korrekturen und die abschließenden Prüfergebnisse stehen in [MIGRATION.md](MIGRATION.md). Es wurde nichts veröffentlicht.
+Stand: Die bestehende CI (Check, Build, Parity) ist auf GitHub erfolgreich gelaufen ([Lauf 39947600620](https://github.com/kreativdeck/hendrik/actions/runs/39947600620); der Deploy-Job wurde dort übersprungen). Ob und wann eine Änderung tatsächlich veröffentlicht wurde, zeigt der Job „Deploy (FTPS)“ des jeweiligen Laufs unter [Actions](https://github.com/kreativdeck/hendrik/actions).
+
+Offene Quelllücken, bewusste Korrekturen und die abschließenden Prüfergebnisse stehen in [MIGRATION.md](MIGRATION.md).

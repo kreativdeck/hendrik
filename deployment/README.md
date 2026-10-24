@@ -2,7 +2,14 @@
 
 Veröffentlicht den geprüften Build (`frontend/dist`) per FTPS nach `https://hendrik.kreativdeck.dev`. Alles liegt in `ftps_deploy.py` (nur Python-Standardbibliothek, keine Fremd-Action) und im Job `deploy` von `.github/workflows/ci.yml`.
 
-**Status: implementiert, aber nicht aktiv.** Der Job `deploy` wird übersprungen, solange die Repository-Variable `DEPLOY_ENABLED` nicht exakt `true` ist. Sie bleibt `false` bzw. ungesetzt, bis die Aktualisierung gleichnamiger Dateien (siehe unten) ausdrücklich bestätigt ist.
+## Betrieb in Kürze
+
+Normaler Ablauf: im Projektwurzelordner `git add .`, `git commit -m "Website aktualisiert"`, `git push origin main`. Danach prüft, baut und testet GitHub die Website (Check, Build, Parity) und veröffentlicht sie per FTPS auf `https://hendrik.kreativdeck.dev`. Ein manueller FTP-Upload ist nicht nötig, `dist/` wird nicht committet, ein lokaler `npm run build` ist optional. FTPS ist nur der Transportweg von GitHub zum Hosting.
+
+- **Aktiv, sobald `DEPLOY_ENABLED` exakt `true` ist.** Der Job „Deploy (FTPS)“ läuft dann nach jedem erfolgreichen Push auf `main`. Ist die Variable nicht `true`, wird der Job übersprungen („skipped“); Check, Build und Parity laufen trotzdem.
+- **Fehlgeschlagener Build veröffentlicht nichts.** Der Deploy-Job startet nur, wenn `build` erfolgreich war, und überträgt exakt das dort geprüfte Artifact.
+- **Ergebnis:** unter [Actions](https://github.com/kreativdeck/hendrik/actions) im Lauf zum Commit. Die bestehende CI lief dort bereits erfolgreich ([Lauf 39947600620](https://github.com/kreativdeck/hendrik/actions/runs/39947600620), Deploy damals übersprungen). Ob eine Änderung live ist, zeigt der Status des Jobs „Deploy (FTPS)“.
+- **Serverdateien:** Gleichnamige Builddateien werden aktualisiert, zusätzliche Dateien nur auf dem Server bleiben erhalten (kein Löschen, kein Spiegelmodus).
 
 ## Ziel
 
@@ -31,7 +38,7 @@ python3 deployment/ftps_deploy.py --offline --source frontend/dist
 # 2. Plan (Standard): lesende FTPS-Verbindung, Vergleich Build ↔ Server, keine Schreibvorgänge
 python3 deployment/ftps_deploy.py --source frontend/dist
 
-# 3. Schreibmodus – nur nach ausdrücklicher Freigabe
+# 3. Schreibmodus – verändert den Server; in GitHub macht das der Job `deploy`, lokal nur bewusst und mit `DEPLOY_ENABLED=true`
 DEPLOY_ENABLED=true python3 deployment/ftps_deploy.py --source frontend/dist --deploy
 ```
 
@@ -63,13 +70,13 @@ Lokal können die Werte in der ignorierten `.env.ftp` liegen. **Diese Datei nie 
 
 Läufe sind wiederholbar (idempotent). Nach einem Abbruch einfach erneut starten; angefangene Dateien sind nie halb ersetzt, weil erst nach vollständigem Upload umbenannt wird. Ältere Läufe erneut auszuführen (Re-run) deployt deren Stand und kann einen neueren überschreiben.
 
-## GitHub-Einrichtung (später durch den Hauptagenten)
+## GitHub-Einrichtung
 
 - Secrets: `FTP_HOST`, `FTP_USER`, `FTP_PASSWORD`. Variablen: `FTP_PORT`, `FTP_REMOTE_DIR`, `SITE_URL`.
-- `DEPLOY_ENABLED` erst auf `true` setzen, nachdem bestätigt ist, dass gleichnamige Dateien auf dem Server aktualisiert werden dürfen.
+- `DEPLOY_ENABLED=true` schaltet die Veröffentlichung bei jedem Push auf `main` ein; jeder andere Wert oder eine fehlende Variable lässt den Job überspringen.
 - Der Job hängt von `build` ab (Check, Build, Parity, Artifact), läuft nur bei `push` auf `main` oder `workflow_dispatch` auf `main` (nie bei Pull Requests) und lädt exakt das Artifact `website-dist-<commit>` desselben Laufs (`actions/download-artifact` v8.0.2, auf Commit-SHA gepinnt; `action.yml` am SHA geprüft). Das Skript stammt aus dem Checkout desselben Commits.
 - Rechte: `contents: read`. Secrets liegen nur als Umgebungsvariablen im Deploy-Schritt, nie in der Shell-Interpolation. Der Workflow-Concurrency-Abbruch gilt nur für Pull Requests; der Deploy-Job nutzt eine eigene Gruppe mit `cancel-in-progress: false`, laufende Deploys werden also nie abgebrochen.
-- Stand: Die bestehende CI (Check, Build, Parity) lief lokal grün, der erste GitHub-Lauf steht noch aus.
+- Stand: Die bestehende CI (Check, Build, Parity) ist auf GitHub erfolgreich gelaufen ([Lauf 39947600620](https://github.com/kreativdeck/hendrik/actions/runs/39947600620)); der Deploy-Job wurde dort übersprungen. Den Status späterer Veröffentlichungen zeigt der Job „Deploy (FTPS)“ unter [Actions](https://github.com/kreativdeck/hendrik/actions).
 
 ## Tests
 
