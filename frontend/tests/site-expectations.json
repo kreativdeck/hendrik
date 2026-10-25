@@ -3765,6 +3765,41 @@
           "width": "600",
           "height": "400",
           "class": "size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-enabled/thumb:group-hover/thumb:scale-[1.025] motion-safe:group-focus-visible/thumb:scale-[1.025]"
+        },
+        {
+          "src": "/assets/images/Landoak/Farben/landoak-kartenhalter-holz.jpg",
+          "alt": "Kartenhalter aus Holz mit Landoak-Karte.",
+          "width": "1280",
+          "height": "960",
+          "class": "size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-enabled/thumb:group-hover/thumb:scale-[1.025] motion-safe:group-focus-visible/thumb:scale-[1.025]"
+        },
+        {
+          "src": "/assets/images/Landoak/Farben/landoak-prospekt.jpg",
+          "alt": "Landoak-Prospekt auf einem Holztisch.",
+          "width": "960",
+          "height": "1280",
+          "class": "size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-enabled/thumb:group-hover/thumb:scale-[1.025] motion-safe:group-focus-visible/thumb:scale-[1.025]"
+        },
+        {
+          "src": "/assets/images/Landoak/Farben/landoak-prospekthalter-holz-vorderansicht.jpg",
+          "alt": "Prospekthalter aus Holz mit Landoak-Prospekt in der Vorderansicht.",
+          "width": "959",
+          "height": "1094",
+          "class": "size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-enabled/thumb:group-hover/thumb:scale-[1.025] motion-safe:group-focus-visible/thumb:scale-[1.025]"
+        },
+        {
+          "src": "/assets/images/Landoak/Farben/landoak-prospekthalter-holz.jpg",
+          "alt": "Prospekthalter aus Holz mit Landoak-Prospekt.",
+          "width": "1234",
+          "height": "959",
+          "class": "size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-enabled/thumb:group-hover/thumb:scale-[1.025] motion-safe:group-focus-visible/thumb:scale-[1.025]"
+        },
+        {
+          "src": "/assets/images/Landoak/Farben/landoak-prospekthalter-mintgruen.jpg",
+          "alt": "Prospekthalter in Mintgrün mit Landoak-Prospekten.",
+          "width": "960",
+          "height": "1280",
+          "class": "size-full rounded-base object-cover motion-safe:transition-transform motion-safe:group-enabled/thumb:group-hover/thumb:scale-[1.025] motion-safe:group-focus-visible/thumb:scale-[1.025]"
         }
       ],
       "galleries": {
@@ -3776,6 +3811,36 @@
               "alt": "Farbmuster in Pastelltönen auf einer Eichenplatte.",
               "width": 600,
               "height": 400
+            },
+            {
+              "src": "/assets/images/Landoak/Farben/landoak-kartenhalter-holz.jpg",
+              "alt": "Kartenhalter aus Holz mit Landoak-Karte.",
+              "width": 1280,
+              "height": 960
+            },
+            {
+              "src": "/assets/images/Landoak/Farben/landoak-prospekt.jpg",
+              "alt": "Landoak-Prospekt auf einem Holztisch.",
+              "width": 960,
+              "height": 1280
+            },
+            {
+              "src": "/assets/images/Landoak/Farben/landoak-prospekthalter-holz-vorderansicht.jpg",
+              "alt": "Prospekthalter aus Holz mit Landoak-Prospekt in der Vorderansicht.",
+              "width": 959,
+              "height": 1094
+            },
+            {
+              "src": "/assets/images/Landoak/Farben/landoak-prospekthalter-holz.jpg",
+              "alt": "Prospekthalter aus Holz mit Landoak-Prospekt.",
+              "width": 1234,
+              "height": 959
+            },
+            {
+              "src": "/assets/images/Landoak/Farben/landoak-prospekthalter-mintgruen.jpg",
+              "alt": "Prospekthalter in Mintgrün mit Landoak-Prospekten.",
+              "width": 960,
+              "height": 1280
             }
           ]
         }
@@ -6910,6 +6975,11 @@
     "assets/images/Landoak/Furniture/Magazine Rack/landoak-produkt-magazine-rack-zeitschriften.jpg": "b68940337584060d50aae3e0ded1280f4922f71fbaa0c2d2dc8bef5a273c9e34",
     "assets/images/Landoak/Furniture/Magazine Rack/landoak-produkt-magazine-rack-vorderansicht.jpg": "5ddcfd616766869d5ddf6f95de86fd5249aaa55137e0ce29e2f1d4ab25cc9131",
     "assets/images/Landoak/Farben/landoak-holzfarben.jpg": "bf1c6f232fba5038f60bfe9cea315e29dcde612d511a44fdee42072123e717e7",
+    "assets/images/Landoak/Farben/landoak-kartenhalter-holz.jpg": "c874438981bdf86c26057ce580916168db9eb3e3f7fb6ed8219a240088e426aa",
+    "assets/images/Landoak/Farben/landoak-prospekt.jpg": "9d7c3c6e9df01861815b216095d76672d99e077d0105ca88f4e2d59992c77c36",
+    "assets/images/Landoak/Farben/landoak-prospekthalter-holz.jpg": "37993e8e844b7bbac41862d7cd0d64bc0e969089a04ee86a19dcac0cee990631",
+    "assets/images/Landoak/Farben/landoak-prospekthalter-holz-vorderansicht.jpg": "90d1238e518a963a4663d0098bcc7a1664bd002169bae4cc5dfa79cc672d40f9",
+    "assets/images/Landoak/Farben/landoak-prospekthalter-mintgruen.jpg": "01ba21bd4fe9f8695026e572c6760b4a7a2703c88ae20ff1c06f5676cd5abaf4",
     "assets/images/Works/landoak-works-9.jpg": "e533efa9da262996c46c4864416fecad2e754dd0f9a7cc99ea005217fda43b38",
     "assets/images/Works/landoak-works-8.jpg": "eb703b58d4fa3d8a87cbee9b3d99104610fab9d9bdc3aba76633723733c6b665",
     "assets/images/Works/landoak-works-13.jpg": "fac01f1335f2b17f9db9433b9af0adb2cd6cc8f4a7c4416849bff1d1ef46e019",
